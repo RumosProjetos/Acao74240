@@ -1,7 +1,7 @@
 IF "%1"=="" GOTO Continue
-	gito add .
-	gito commit -m %1
-	gito push
+	git add .
+	git commit -m %1
+	git push
 
 	echo 'Criando Pasta de Solucao'
 	mkdir Aula%1
