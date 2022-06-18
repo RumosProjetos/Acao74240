@@ -1,11 +1,13 @@
 IF "%1"=="" GOTO Continue
+	git config --global user.name "Jônatas Afonso"
+	git config --global user.email "jonatas_afonso@hotmail.com"
 	git add .
-	git commit -m %1
+	git commit -m "Preparacao da Aula %1"
 	git push
 
 	echo 'Criando Pasta de Solucao'
-	mkdir Aula%1
-	cd Aula%1
+	mkdir %1
+	cd %1
 	echo 'Agenda' >> agenda.txt
 
 	echo 'Versao mais atual do .NET CORE instalada'
@@ -34,4 +36,10 @@ IF "%1"=="" GOTO Continue
 	dotnet build
 	dotnet test
 :Continue
-echo 'Favor informar o nome da pasta'		
+echo 'Favor informar o nome da pasta'	
+cd ..
+git add .
+git commit -m "Aula %1 Iniciada"
+git push	
+
+cd %1
