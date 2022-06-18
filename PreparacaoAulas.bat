@@ -8,7 +8,7 @@ IF "%1"=="" GOTO Continue
 	echo 'Criando Pasta de Solucao'
 	mkdir %1
 	cd %1
-	echo 'Agenda' >> agenda.txt
+	echo 'Agenda da Aula %1' >> agenda.txt
 
 	echo 'Versao mais atual do .NET CORE instalada'
 	dotnet --version
