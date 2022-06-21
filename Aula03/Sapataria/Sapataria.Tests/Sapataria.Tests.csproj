@@ -16,7 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Projeto.LogicaNegocio\Projeto.LogicaNegocio.csproj" />
+    <ProjectReference Include="..\Sapataria.LogicaNegocio\Sapataria.LogicaNegocio.csproj" />
+    <ProjectReference Include="..\Sapataria.Modelo\Sapataria.Modelo.csproj" />
   </ItemGroup>
 
 </Project>
