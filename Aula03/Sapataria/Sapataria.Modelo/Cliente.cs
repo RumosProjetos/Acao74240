@@ -37,5 +37,27 @@ namespace Sapataria.Modelo
         {
             this.Nome = nome;
         }
+
+        public override int ObterIdade()
+        {
+            var idade = (int)((DateTime.Now.Subtract(DataNascimento)).Days * 365.25);
+            return idade;
+        }
+
+
+        public static List<Cliente> operator +(Cliente cliente, Cliente cliente2)
+        {
+            var resultado = new List<Cliente>();
+            resultado.Add(cliente);
+            resultado.Add(cliente2);
+            return resultado;
+        }
+
+
+        public static List<Cliente> operator +(List<Cliente> clientes, Cliente cliente2)
+        {
+            clientes.Add(cliente2);
+            return clientes;
+        }
     }
 }

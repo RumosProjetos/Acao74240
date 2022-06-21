@@ -10,5 +10,11 @@ namespace Sapataria.Modelo
     {
         public int CodigoFuncional { get; set; }
         public DateTime DataContratacao { get; set; }
+
+        public new int ObterIdade()
+        {
+            var resultado = 18;
+            return resultado;
+        }
     }
 }
