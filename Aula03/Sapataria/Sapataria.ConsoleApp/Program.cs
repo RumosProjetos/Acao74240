@@ -17,5 +17,10 @@ Console.WriteLine(joao + maria);
 
 
 var conceicao = new Funcionario();
+conceicao.Nome = "Conceicao";
+conceicao.DataNascimento = new DateTime(2000, 01, 01);
 Console.WriteLine(conceicao.ObterIdade());
+
+Console.WriteLine(conceicao.ImprimirDados());
+Console.WriteLine(conceicao.ImprimirTodosOsDados());
 

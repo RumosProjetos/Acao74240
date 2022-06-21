@@ -6,6 +6,7 @@
         public string NumeroIdentificacaoFiscal { get; set; }
         public Sexo Sexo { get; set; }
         public DateTime DataNascimento { get; set; }
+        public int Idade => ObterIdade();
 
 
         public virtual int ObterIdade()
