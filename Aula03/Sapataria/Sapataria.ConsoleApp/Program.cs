@@ -35,13 +35,15 @@ impressora.Imprimir(conceicao.ToString());
 var sapatoAdidas = new Sapato();
 sapatoAdidas.Exemplo();
 sapatoAdidas.ExemploSobrescrita();
-
+//sapatoAdidas.InformacaoInterna = ""; -- Propriedade Private
+//sapatoAdidas.PropriedadeProtegida = "asdasd";
 
 var conserto = new Reparo();
 conserto.Exemplo();
 conserto.ExemploSobrescrita();
 
 
+var malas = new Mala();
 
 
 Console.ReadLine();
