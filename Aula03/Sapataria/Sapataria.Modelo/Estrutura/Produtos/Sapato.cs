@@ -18,9 +18,6 @@
         {
             InformacaoInterna = "Exemplo interno";
             PropriedadeProtegida = "Exemplo protected";
-
-            var mala = new Mala();
-
         }
 
         //Permite Substituir no filho
