@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Sapataria.Modelo.Estrutura.Pessoas;
-
+using Sapataria.Modelo;
 
 
 
