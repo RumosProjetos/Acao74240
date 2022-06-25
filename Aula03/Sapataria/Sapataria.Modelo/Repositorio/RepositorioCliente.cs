@@ -3,7 +3,7 @@ using Sapataria.Modelo.Infraestrutura;
 
 namespace Sapataria.Modelo.Repositorio
 {
-    public class RepositorioCliente : IRepositorio<Cliente>, IImpressora, ILogger
+    public class RepositorioCliente : IRepositorio<Cliente>
     {
         private List<Cliente> clientes { get; set; }
         public RepositorioCliente()
@@ -58,21 +58,6 @@ namespace Sapataria.Modelo.Repositorio
             }
 
             return new Cliente();
-        }
-
-        public void Imprimir()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Informacao(string message)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Alerta(string message)
-        {
-            throw new NotImplementedException();
         }
     }
 }

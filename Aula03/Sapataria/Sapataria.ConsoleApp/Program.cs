@@ -1,8 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Sapataria.Modelo.Estrutura.Pessoas;
-
-
-
+using Sapataria.Modelo.Estrutura.Produtos;
+using Sapataria.Modelo.Infraestrutura;
 
 Console.WriteLine("OI " + "Mundo");
 Console.WriteLine(1 + 1); //2
@@ -25,3 +24,24 @@ Console.WriteLine(conceicao.ObterIdade());
 Console.WriteLine(conceicao.ImprimirDados());
 Console.WriteLine(conceicao.ImprimirTodosOsDados());
 
+
+
+var impressora = new ImpressoraNovoFornecedor();
+impressora.Imprimir(conceicao.ToString());
+
+
+
+
+var sapatoAdidas = new Sapato();
+sapatoAdidas.Exemplo();
+sapatoAdidas.ExemploSobrescrita();
+
+
+var conserto = new Reparo();
+conserto.Exemplo();
+conserto.ExemploSobrescrita();
+
+
+
+
+Console.ReadLine();

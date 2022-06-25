@@ -1,7 +1,8 @@
 ﻿namespace Sapataria.Modelo.Infraestrutura
 {
-    public interface IImpressora
+    public interface IImpressora 
     {
-        public void Imprimir();
+        public void Imprimir(byte[] dados);
+        public void Imprimir(string dados);
     }
 }
