@@ -25,21 +25,32 @@
                 resultado = false;
 
             // -RN02 : NIF não possui letras
-            for (int i = 0; i < NumeroIdentificacaoFiscal.Length; i++)
+            //for (int i = 0; i < NumeroIdentificacaoFiscal.Length; i++)
+            //{
+            //    //12345678A                
+            //    if (char.IsDigit(NumeroIdentificacaoFiscal[i]) == false)
+            //    {
+            //        resultado = false;
+            //    }
+            //}
+            if(NumeroIdentificacaoFiscal.All(x => char.IsDigit(x)))
             {
-                //12345678A                
-                if (char.IsDigit(NumeroIdentificacaoFiscal[i]) == false)
-                {
-                    resultado = false;
-                }
+                resultado = false;
             }
+
 
             //RN03 : Clientes são pessoas singulares, logo, NIF TEM que começar com 1, 2 ou 3
             //var valoresAceites = new int[4] { 1, 2, 3, 4 };
-            if (NumeroIdentificacaoFiscal[0] != 1 &&
-                NumeroIdentificacaoFiscal[0] != 2 &&
-                NumeroIdentificacaoFiscal[0] != 3 &&
-                NumeroIdentificacaoFiscal[0] != 4)
+            //if (NumeroIdentificacaoFiscal[0] != 1 &&
+            //    NumeroIdentificacaoFiscal[0] != 2 &&
+            //    NumeroIdentificacaoFiscal[0] != 3 &&
+            //    NumeroIdentificacaoFiscal[0] != 4)
+            //{
+            //    resultado = false;
+            //}
+
+            var valoresAceites = new int[4] { 1, 2, 3, 4 };
+            if (valoresAceites.Contains(NumeroIdentificacaoFiscal[0]) == false)
             {
                 resultado = false;
             }

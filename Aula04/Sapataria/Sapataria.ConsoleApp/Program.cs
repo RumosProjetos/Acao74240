@@ -2,6 +2,25 @@
 using Sapataria.Modelo.Estrutura.Pessoas;
 using Sapataria.Modelo.Estrutura.Produtos;
 using Sapataria.Modelo.Infraestrutura;
+using Sapataria.Modelo.Repositorio;
+
+
+
+
+var repo = new RepositorioCliente();
+var cli1 = new Cliente("Maria");
+cli1.NumeroIdentificacaoFiscal = "123456789";
+repo.Adicionar(cli1);
+
+var cli2 = new Cliente("Joao");
+cli2.NumeroIdentificacaoFiscal = "987654321";
+repo.Adicionar(cli2);
+var clienteLocalizado = repo.ObterPorNome("Joao");
+
+Console.WriteLine(clienteLocalizado.Nome.ToUpper());
+
+
+
 
 Console.WriteLine("OI " + "Mundo");
 Console.WriteLine(1 + 1); //2
@@ -44,5 +63,12 @@ conserto.ExemploSobrescrita();
 
 
 
+
+for (int i = 0; i < 10000; i++)
+{
+    Console.WriteLine(clienteLocalizado.Nome.ToUpper());
+    Thread.Sleep(5000);
+
+}
 
 Console.ReadLine();

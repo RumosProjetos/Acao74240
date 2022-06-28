@@ -1,6 +1,6 @@
 ﻿namespace Sapataria.Modelo.Estrutura.Pessoas
 {
-    public class Cliente : Pessoa
+    public sealed class Cliente : Pessoa
     {
         public Morada Morada { get; set; }
 

@@ -59,5 +59,61 @@ namespace Sapataria.Modelo.Repositorio
 
             return new Cliente();
         }
+        //761 - SQLServer
+        /*
+        3 - Select c.*
+        1 - from clientes as c
+        2 - where c.nome = @nome
+        4 - order by c.nome
+         */
+
+        public Cliente ObterPorNomeUsandoLinq(string nome)
+        {
+            var resultado = from c in clientes
+                            where c.Nome == nome
+                            orderby c.Nome
+                            select c;
+
+            return resultado.ToList()[0];
+        }
+
+        
+        public Cliente ObterPorNomeUsandoLinqLambdaExpression(string nome)
+        {
+            var resultado = clientes.FirstOrDefault(x => x.Nome == nome);
+            return resultado;
+        }
+
+
+        public string ObterNif(string nome)
+        {
+            var resultado = from c in clientes
+                            where c.Nome == nome
+                            orderby c.Nome
+                            select c.NumeroIdentificacaoFiscal;
+
+            return resultado.ToList()[0];
+        }
+
+
+        public Cliente ObterFormatado(string nome, string nif)
+        {
+            var resultado = clientes
+                        .Where(x => x.Nome == nome && x.NumeroIdentificacaoFiscal == nif)
+                        .OrderBy(x => x.Nome)
+                        .OrderByDescending(x => x.NumeroIdentificacaoFiscal)
+                        .ThenBy(x => x.DataNascimento)
+                        .Select(x => new Cliente
+                        {
+                            Nome = nome.ToUpper(),
+                            DataNascimento = DateTime.Now,
+                            Id = x.Id,
+                            Morada = x.Morada,
+                            NumeroIdentificacaoFiscal = x.NumeroIdentificacaoFiscal,
+                            Sexo = x.Sexo
+                        });
+
+            return resultado.FirstOrDefault();
+        }
     }
 }
