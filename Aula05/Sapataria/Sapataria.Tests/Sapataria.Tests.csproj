@@ -20,4 +20,10 @@
     <ProjectReference Include="..\Sapataria.Modelo\Sapataria.Modelo.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="2-availability-sets.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
