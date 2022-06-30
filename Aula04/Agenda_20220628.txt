@@ -4,4 +4,4 @@ Testes Automatizados
 	- RN01 : NIF possui exatamente 9 números
 	- RN02 : NIF não possui letras
 	...
-	- RN03 : Clientes são pessoas singulares, logo, NIF TEM que começar com 1, 2 ou 3
+	- RN03 : Clientes são pessoas singulares, logo, NIF TEM que começar com 1, 2 3, 4
