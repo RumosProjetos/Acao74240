@@ -31,7 +31,7 @@ namespace Sapataria.Tests.LinqExemplos
             //arrange
 
             //act
-            var listaResultado = lista.Select(x => new Cliente
+            var listaResultado = clientes.Select(x => new Cliente
             {
                 DataNascimento = x.DataNascimento,
                 Id = x.Id,
@@ -44,7 +44,7 @@ namespace Sapataria.Tests.LinqExemplos
             var existeLetraMinuscula = listaResultado.Any(x => x.Nome.Any(y => char.IsLower(y)));
 
             //assert
-            Assert.AreEqual(4, listaResultado.Count());
+            Assert.AreEqual(7, listaResultado.Count());
             Assert.IsFalse(existeLetraMinuscula);
         }
 
@@ -59,7 +59,7 @@ namespace Sapataria.Tests.LinqExemplos
 
             //act
             //NÃO USAR TERNÁRIO EM COISAS QUE NÃO SÃO TERNÁRIOS
-            var lsitaResultado = lista                
+            var lsitaResultado = clientes                
                 .Select(x => 
                 new { 
                     NomeCliente = x.Nome, 
@@ -85,7 +85,7 @@ namespace Sapataria.Tests.LinqExemplos
             //arrange
 
             //act
-            var lsitaResultado = lista.Select(x => new ClienteDto {
+            var lsitaResultado = clientes.Select(x => new ClienteDto {
                 NomeEspecifico = x.Nome.ToLower(),
                 MoradaEspecifico = x.Morada.Distrito + x.Morada.NumeroPorta
             });
