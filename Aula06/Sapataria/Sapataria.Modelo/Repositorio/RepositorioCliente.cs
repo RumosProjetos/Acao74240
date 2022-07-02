@@ -31,7 +31,7 @@ namespace Sapataria.Modelo.Repositorio
         {
             foreach (var cliente in clientes)
             {
-                if(cliente.Equals(item))
+                if (cliente.Equals(item))
                     return cliente;
             }
 
@@ -77,7 +77,7 @@ namespace Sapataria.Modelo.Repositorio
             return resultado.ToList()[0];
         }
 
-        
+
         public Cliente ObterPorNomeUsandoLinqLambdaExpression(string nome)
         {
             var resultado = clientes.FirstOrDefault(x => x.Nome == nome);
@@ -114,6 +114,54 @@ namespace Sapataria.Modelo.Repositorio
                         });
 
             return resultado.FirstOrDefault();
+        }
+
+
+        /// <summary>
+        /// Persiste a lista que está na memória em um arquivo texto
+        /// </summary>
+        /// <exception cref="NotImplementedException"></exception>
+        public void Salvar()
+        {
+            var diretorio = @"c:\temp";
+            var caminho = @"c:\temp\clientes.txt";
+            if (Directory.Exists(diretorio) == false)
+            {
+                Directory.CreateDirectory(diretorio);
+            }
+
+            var dadosClientes = new List<string>();
+            foreach (var item in clientes)
+            {
+                dadosClientes.Add(item.ToString());
+            }
+
+            File.AppendAllLines(caminho, dadosClientes);
+        }
+
+        public List<Cliente> Listar()
+        {
+            var resultado = new List<Cliente>();
+            var caminho = @"c:\temp\clientes.txt";
+            if (File.Exists(caminho))
+            {
+                var linhas = File.ReadAllLines(caminho);
+                foreach (var item in linhas)
+                {
+                    var cliente = new Cliente();
+                    var dados = item.Split(";");
+                    cliente.Id = Convert.ToInt32(dados[0]);
+                    cliente.Nome = dados[1];
+                    cliente.NumeroIdentificacaoFiscal = dados[2];
+                    cliente.Sexo = (Sexo)Convert.ToInt32(dados[3]);
+                    cliente.DataNascimento = DateTime.Parse(dados[4]);
+
+                    resultado.Add(cliente);
+                }
+            }
+
+            return resultado;
+
         }
     }
 }

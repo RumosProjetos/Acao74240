@@ -30,9 +30,10 @@ namespace Sapataria.ConsoleApp
                         AdicionarCliente();
                         break;
                     case Constantes.busca:
-                        var obj2 = new ProdutoApp();
+                        
                         break;
                     case Constantes.listagem:
+                        ListarClientes();
                         break;
                     case Constantes.edicao:
                         break;
@@ -110,7 +111,8 @@ namespace Sapataria.ConsoleApp
 
         public void ListarClientes()
         {
-            Console.WriteLine("Listagem de Clientes");
+            var logicaCliente = new LogicaCliente();
+            logicaCliente.ListarClientes();
         }
 
         public void EditarCliente()

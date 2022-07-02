@@ -64,5 +64,15 @@ namespace Sapataria.Modelo.Repositorio
         {
             funcionarios.Remove(item);
         }
+
+        public void Salvar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Funcionario> Listar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

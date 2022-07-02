@@ -13,6 +13,9 @@
         public void Atualizar(T item);//Update
         public void Apagar(T item);//Delete
 
+        public void Salvar();
+        public List<T> Listar();
+
 
         /// <summary>
         /// Valor default

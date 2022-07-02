@@ -1,4 +1,6 @@
-﻿namespace Sapataria.Modelo.Estrutura.Pessoas
+﻿using System.Text;
+
+namespace Sapataria.Modelo.Estrutura.Pessoas
 {
     public sealed class Cliente : Pessoa
     {
@@ -54,5 +56,11 @@
             return clientes;
         }
 
+        public override string ToString()
+        {
+            return $"{Id};{Nome};{NumeroIdentificacaoFiscal};{Sexo};{DataNascimento};{Morada}";
+        }
+
     }
+
 }

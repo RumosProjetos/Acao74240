@@ -62,5 +62,15 @@ namespace Sapataria.Modelo.Repositorio
 
             return new Sapato();
         }
+
+        public void Salvar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Sapato> Listar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
