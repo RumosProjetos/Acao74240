@@ -12,17 +12,18 @@ namespace Sapataria.Tests.PadroesProjeto
     public class ExemploBuilder
     {
         [TestMethod]
-        public void DeveMontarPropsotaDoTipoSeguroVida()
+        public void DeveMontarPropostaDoTipoSeguroVida()
         {
             //arrange
-            var apoliceGenericaExemplo = new SeguroVida();
-            
+            var apoliceGenericaExemplo = new SeguroVida();            
             var proposta = new PropostaDeSeguro(apoliceGenericaExemplo);
-            proposta.MontarProposta(10);
 
             //act
+            proposta.MontarProposta(10);
 
             //assert	
+            Assert.IsNotNull(proposta);
+            Assert.AreEqual(typeof(SeguroVida), apoliceGenericaExemplo.GetType());
         }
 
 
@@ -33,11 +34,13 @@ namespace Sapataria.Tests.PadroesProjeto
             var apoliceGenericaExemplo = new SeguroImovel();
 
             var proposta = new PropostaDeSeguro(apoliceGenericaExemplo);
-            proposta.MontarProposta(10);
 
             //act
+            proposta.MontarProposta(10);
 
             //assert	
+            Assert.IsNotNull(proposta);
+            Assert.AreEqual(typeof(SeguroImovel), apoliceGenericaExemplo.GetType());
         }
     }
 }

@@ -57,7 +57,7 @@ namespace Sapataria.Tests.Playground
             var caminho = @"c:\temp\teste.txt";
 
             //act
-            File.WriteAllLines(caminho, new string[] { "linha01", "linha2"});
+            File.WriteAllLines(caminho, new string[] { "linha01", "linha2" });
             var conteudo = File.ReadAllLines(caminho);
 
             //assert
@@ -94,7 +94,7 @@ namespace Sapataria.Tests.Playground
                 dataCriacao = File.GetCreationTime(caminho);
                 File.Delete(caminho);
             }
-                        
+
 
             //assert
             Assert.AreNotEqual(new DateTime(), dataCriacao);
@@ -155,14 +155,14 @@ namespace Sapataria.Tests.Playground
             //act
             if (Directory.Exists(caminho))
             {
-                resultado =  Directory.GetFiles(caminho).OrderByDescending(x => x).ToList();
+                resultado = Directory.GetFiles(caminho).OrderByDescending(x => x).ToList();
             }
 
             foreach (var item in resultado)
             {
                 var conteudo = File.ReadAllText(item);
             }
-            
+
 
             //assert
             Assert.IsNotNull(resultado);
@@ -195,7 +195,7 @@ namespace Sapataria.Tests.Playground
             }
 
 
-            
+
             var conteudo = Newtonsoft.Json.JsonConvert.SerializeObject(listaClientes);
 
 
@@ -207,21 +207,38 @@ namespace Sapataria.Tests.Playground
             Assert.IsNotNull(conteudoJson);
         }
 
+
         [TestMethod]
         public void DeveriaDesserializarJsonEmObjetoTest()
         {
             //arrange 
-            var caminho = @"c:\temp\teste_cliente.txt";
-            var listaClientes = new List<Cliente>();
+            var caminho = @"c:\temp\exemplo.txt";
+            File.WriteAllText(caminho, "[{\"Morada\":{\"Rua\":null,\"NumeroPorta\":null,\"Complemento\":null,\"Distrito\":\"Setubal\",\"CodigoPostal\":{\"Codigo\":\"2830\",\"Complemento\":\"044\"},\"TipoMorada\":2},\"Id\":0,\"Nome\":\"Jonatas\",\"NumeroIdentificacaoFiscal\":\"123456789\",\"Sexo\":0,\"DataNascimento\":\"1984-01-01T00:00:00\",\"Idade\":38}]");
 
             //act 
             var conteudo = File.ReadAllText(caminho);
-            listaClientes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Cliente>>(conteudo);
+            var listaClientes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Cliente>>(conteudo);
             var clientePreferencial = listaClientes.FirstOrDefault(x => x.Idade == 38);
 
             //Assert
             Assert.AreEqual("Jonatas", clientePreferencial.Nome);
+        }
 
+
+
+        [TestMethod]
+        [ExpectedException(typeof(FileNotFoundException))]
+        public void DeveriaGerarExceptionTest()
+        {
+            //arrange 
+            var caminho = @"c:\temp\INEXISTENTE.txt";
+            if (File.Exists(caminho))
+            {
+                File.Delete(caminho);
+            }
+
+            //act 
+            var conteudo = File.ReadAllText(caminho);            
         }
 
     }
