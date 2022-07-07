@@ -42,6 +42,8 @@ namespace Sapataria.Modelo.Estrutura.Pessoas
             return idade;
         }
 
+
+        //TODO: Verificar local correto desse método
         public static List<Cliente> operator +(Cliente cliente, Cliente cliente2)
         {
             var resultado = new List<Cliente>();
@@ -51,6 +53,8 @@ namespace Sapataria.Modelo.Estrutura.Pessoas
         }
 
 
+
+        //TODO: Verificar local correto desse método
         public static List<Cliente> operator +(List<Cliente> clientes, Cliente cliente2)
         {
             clientes.Add(cliente2);
