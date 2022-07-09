@@ -1,0 +1,9 @@
+2022/07/09
+	Padroes de Projeto
+		Singleton
+		Adapter
+		Decorator
+		Proxy
+		
+		Observer
+	Início do projeto
