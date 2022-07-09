@@ -1,8 +1,12 @@
-﻿namespace Sapataria.Modelo.Estrutura.Pessoas
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Sapataria.Modelo.Estrutura.Pessoas
 {
     public abstract class Pessoa
     {
         public int Id { get; set; }
+
+        [MaxLength(150), Required, MinLength(10)]
         public string Nome { get; set; }
         public string NumeroIdentificacaoFiscal { get; set; }
         public Sexo Sexo { get; set; }

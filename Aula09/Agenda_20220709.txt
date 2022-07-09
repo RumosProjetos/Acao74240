@@ -2,8 +2,10 @@
 	Padroes de Projeto
 		Singleton
 		Adapter
-		Decorator
-		Proxy
+
 		
 		Observer
+		
+		Decorator
+		Proxy
 	Início do projeto

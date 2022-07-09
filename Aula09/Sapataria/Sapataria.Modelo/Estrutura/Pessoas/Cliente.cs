@@ -1,7 +1,12 @@
-﻿namespace Sapataria.Modelo.Estrutura.Pessoas
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Sapataria.Modelo.Estrutura.Pessoas
 {
     public sealed class Cliente : Pessoa
     {
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
         public Morada Morada { get; set; }
 
         /// <summary>

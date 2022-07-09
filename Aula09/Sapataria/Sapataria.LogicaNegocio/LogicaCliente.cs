@@ -48,10 +48,10 @@ namespace Sapataria.LogicaNegocio
             repositorio.Salvar();
         }
 
-        public void ListarClientes()
+        public List<Cliente> ListarClientes()
         {
             var repositorio = new RepositorioCliente();
-            repositorio.Listar();
+            return repositorio.Listar();
         }
 
 
