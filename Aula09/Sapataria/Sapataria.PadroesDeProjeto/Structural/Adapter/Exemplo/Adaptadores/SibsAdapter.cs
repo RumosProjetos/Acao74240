@@ -21,6 +21,7 @@ namespace Sapataria.PadroesDeProjeto.Structural.Adapter.Exemplo.Adaptadores
             };
 
             sibs.PagarEmEuros(ValorPago);
+            DataPagamento = DateTime.Now;
         }
     }
 }

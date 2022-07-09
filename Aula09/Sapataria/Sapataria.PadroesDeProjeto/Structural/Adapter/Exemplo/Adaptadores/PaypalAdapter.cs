@@ -19,6 +19,7 @@ namespace Sapataria.PadroesDeProjeto.Structural.Adapter.Exemplo.Adaptadores
 
             var paypal = new PayPal();
             paypal.PagarEmDolar(ValorPago, credenciais);
+            DataPagamento = DateTime.Now;
         }
     }
 }

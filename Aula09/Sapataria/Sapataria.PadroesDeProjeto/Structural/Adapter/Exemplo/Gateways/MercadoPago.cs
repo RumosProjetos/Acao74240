@@ -9,7 +9,7 @@ namespace Sapataria.PadroesDeProjeto.Structural.Adapter.Exemplo.Gateways
     /// <summary>
     /// Gateway Brasileiro
     /// </summary>
-    public class MercadoLivre
+    public class MercadoPago
     {
         public void PagarEmReais(decimal valor, DateTime dataProcessamento)
         {

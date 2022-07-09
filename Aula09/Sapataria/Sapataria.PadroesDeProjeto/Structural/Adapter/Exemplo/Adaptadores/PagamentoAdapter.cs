@@ -14,5 +14,7 @@ namespace Sapataria.PadroesDeProjeto.Structural.Adapter.Exemplo.Adaptadores
         public DateTime DataPagamento { get; set; }
 
         public abstract void Pagar();
+
+        public DateTime DataProcessamento { get; set; }
     }
 }

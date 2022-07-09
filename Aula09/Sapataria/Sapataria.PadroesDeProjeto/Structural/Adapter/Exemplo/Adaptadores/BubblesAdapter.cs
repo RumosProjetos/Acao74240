@@ -8,6 +8,7 @@ namespace Sapataria.PadroesDeProjeto.Structural.Adapter.Exemplo.Adaptadores
         {
             var pagamento = new ExemploDeSimplicacao();
             pagamento.PagarEmRupias(ValorPago);
+            DataPagamento = DateTime.Now;
         }
     }
 }
