@@ -4,10 +4,7 @@ namespace Projeto.Modelo
 {
     public class Venda
     {
-        public Venda()
-        {
-            tblSalesDetails = new List<tblSalesDetail>();
-        }
+        public Venda() => tblSalesDetails = new List<DetalhesDaVenda>();
 
         public int SalesID { get; set; }
         public string SalesDocNum { get; set; }
@@ -18,8 +15,8 @@ namespace Projeto.Modelo
         public DateTime? Datemodified { get; set; }
         public bool? Paid { get; set; }
         public int CUstomer { get; set; }
-        public virtual tblPos tblPos { get; set; }
-        public virtual List<tblSalesDetail> tblSalesDetails { get; set; }
+        public virtual PontoDeVenda tblPos { get; set; }
+        public virtual List<DetalhesDaVenda> tblSalesDetails { get; set; }
         public virtual Utilizador tblUser { get; set; }
     }
 }
