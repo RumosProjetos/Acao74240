@@ -12,9 +12,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Tests", "Projeto.Tests\Projeto.Tests.csproj", "{380A9EA0-FBC2-49BF-9818-00F9B00B418F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacao", "Documentacao", "{5BADECB3-A7A1-4845-9903-FDDE555A2D2D}"
-	ProjectSection(SolutionItems) = preProject
-		Projeto.Modelo\Diagrama.cd = Projeto.Modelo\Diagrama.cd
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

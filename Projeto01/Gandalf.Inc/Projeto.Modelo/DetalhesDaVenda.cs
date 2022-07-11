@@ -6,16 +6,15 @@ namespace Projeto.Modelo
         public Guid Id { get; set; }
         public int Seq { get; set; }
 
-        public int Product { get; set; }
-        public int Quantity { get; set; }
+        public Produto Produto { get; set; }
+        public int Quantidade { get; set; }
 
-        public int UnitPrice { get; set; }
+        public int PrecoUnitario { get; set; }
 
-        public decimal LineTotal { get; set; }
+        public decimal TotalDaNota { get; set; }
 
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DataCriacao { get; set; }
 
         public virtual Venda Venda { get; set; }
     }
 }
-  

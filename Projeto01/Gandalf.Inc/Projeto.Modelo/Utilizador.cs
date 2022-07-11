@@ -6,13 +6,13 @@ namespace Projeto.Modelo
     {
         public Utilizador()
         {
-            tblSales = new List<Venda>();
+            Vendas = new List<Venda>();
         }
-        
-        public Guid ID { get; set; }
+
+        public Guid Id { get; set; }
         public string UserName { get; set; }
         public string UserNumber { get; set; }
         public string UserPw { get; set; }
-        public List<Venda> tblSales { get; set; }
+        public List<Venda> Vendas { get; set; }
     }
 }
