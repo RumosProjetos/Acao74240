@@ -4,7 +4,7 @@ namespace Projeto.Modelo
     {
         public TipoPagamento() => Pagamentos = new List<Pagamento>();
         public Guid Id { get; set; }
-        public string Descricao { get; set; }
+        public string? Descricao { get; set; }
         public virtual List<Pagamento> Pagamentos { get; set; }
     }
 }

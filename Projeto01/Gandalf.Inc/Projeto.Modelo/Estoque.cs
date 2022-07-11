@@ -7,7 +7,7 @@ namespace Projeto.Modelo
         public int QuantidadeMinima { get; set; }
         public DateTime? DataModificacao { get; set; }
         public DateTime? DataCriacao { get; set; }
-        public virtual Produto Produto { get; set; }
-        public virtual Loja Loja { get; set; }
+        public virtual Produto? Produto { get; set; }
+        public virtual Loja? Loja { get; set; }
     }
 }
