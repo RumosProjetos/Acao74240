@@ -18,3 +18,4 @@ namespace Projeto.Modelo
         public virtual Venda Venda { get; set; }
     }
 }
+  
