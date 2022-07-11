@@ -4,18 +4,16 @@ namespace Projeto.Modelo
 {
     public class Pagamento
     {
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
 
-        public string SalesNumDoc { get; set; }
+        public string NumeroNotaVenda { get; set; }
 
-        public decimal PaidValue { get; set; }
+        public decimal ValorPago { get; set; }
 
-        public int? PaymentType { get; set; }
+        public DateTime? DataCriacao { get; set; }
 
-        public DateTime? CreatedDate { get; set; }
+        public string Loja { get; set; }
 
-        public string Store { get; set; }
-
-        public virtual tblPaymentType tblPaymentType { get; set; }
+        public virtual TipoPagamento TipoPagamento { get; set; }
     }
 }

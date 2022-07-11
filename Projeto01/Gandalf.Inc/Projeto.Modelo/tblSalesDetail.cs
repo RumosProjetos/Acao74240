@@ -1,16 +1,12 @@
 
 namespace Projeto.Modelo
 {
-    public class tblSalesDetail
+    public class DetalhesDaVenda
     {
-        public int SalesDetailID { get; set; }
-
-        public int SalesID { get; set; }
-
+        public Guid Id { get; set; }
         public int Seq { get; set; }
 
         public int Product { get; set; }
-
         public int Quantity { get; set; }
 
         public int UnitPrice { get; set; }
@@ -19,6 +15,6 @@ namespace Projeto.Modelo
 
         public DateTime? DateCreated { get; set; }
 
-        public virtual Venda tblSale { get; set; }
+        public virtual Venda Venda { get; set; }
     }
 }

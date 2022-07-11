@@ -10,23 +10,22 @@ namespace Projeto.Modelo
         }
 
 
-        public int ProductID { get; set; }
-        public string Barcode { get; set; }
-        public string ProductName { get; set; }
-        public string Family { get; set; }
-        public string UnitMeasure { get; set; }
-        public decimal QtyPerUnit { get; set; }
+        public Guid Id { get; set; }
+        public string CodigoBarras { get; set; }
+        public string NomeProduto { get; set; }
+        public string UnidadeMedida { get; set; }
+        public decimal QuantidadePorUnidade { get; set; }
 
-        public decimal UnitPrice { get; set; }
+        public decimal PrecoUnitario { get; set; }
 
-        public bool? Discontinued { get; set; }
+        public bool? Descontinuado { get; set; }
 
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DataCriacao { get; set; }
 
-        public DateTime? DateModified { get; set; }
+        public DateTime? DataModificacao { get; set; }
 
-        public virtual Categoria tblFamily { get; set; }
+        public virtual Categoria Categoria { get; set; }
 
-        public virtual List<tblStock> tblStocks { get; set; }
+        public virtual List<Estoque> Estoques { get; set; }
     }
 }

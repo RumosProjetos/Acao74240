@@ -2,25 +2,12 @@
 
 namespace Projeto.Modelo
 {
-    public class tblPos
+    public class PontoDeVenda
     {
-         public tblPos()
-        {
-            tblSales = new List<Venda>();
-        }
-
-        
-        public int PosID { get; set; }
-
-
-
-        public string Store { get; set; }
-
-        [StringLength(25)]
-        public string StoreLocation { get; set; }
-
-        public virtual tblStore tblStore { get; set; }
-
-         public virtual List<Venda> tblSales { get; set; }
+         public PontoDeVenda() => vendas = new List<Venda>();
+«       public Guid Id { get; set; }
+        public string LocalizacaoLoja { get; set; }
+        public virtual Loja Loja { get; set; }
+         public virtual List<Venda> Vendas { get; set; }
     }
 }
