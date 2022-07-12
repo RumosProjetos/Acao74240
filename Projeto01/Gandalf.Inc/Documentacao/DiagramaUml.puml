@@ -27,7 +27,6 @@ class Estoque {
  }
 
 class Loja {
-    + Loja()
     + Id 
     + Nome 
     + Endereco 
@@ -38,6 +37,7 @@ class Loja {
 
  class PontoDeVenda {
     + Id 
+    + Nome
     + Localizacao     
 }
 
@@ -50,10 +50,10 @@ class Venda {
 
 class DetalhesDaVenda {
     + Id 
-    + Seq     
+    + Sequencial     
     + Quantidade 
     + PrecoUnitario 
-    + TotalDaNota
+    + TotalPorItem
     + DataCriacao 
 }
 
@@ -71,9 +71,16 @@ class TipoPagamento {
 
 class Pagamento {
     + Id 
-    + Seq
-    + ValorPago 
+    + NumeroSequencialNota
+    + ValorTotalPago 
     + DataCriacao   
+}
+
+class Cliente {
+    + Id 
+    + Nome
+    + DataCriacao
+    + Morada
 }
 
 ' Relacoes
@@ -84,8 +91,9 @@ Loja "1" *-- "0..*" PontoDeVenda : Possui
 Loja "1" *-- "0..*" Venda : Realiza
 PontoDeVenda "1" *-- "0..*" Venda : Realiza
 Venda "1" *-- "1..*" DetalhesDaVenda : Possui
+Cliente "1" *-- "1..*" Venda : Possui
 DetalhesDaVenda "1" *-- "1..*" Produto : Possui
 Utilizador  "1" *-- "0..*" Venda : Realiza
 TipoPagamento  "1" *-- "0..*" Pagamento : Possui
-Loja "1" *-- "0..*" Pagamento : Possui
+Venda "1" *-- "0..*" Pagamento : Possui
 @enduml

@@ -8,7 +8,7 @@
         {
             //arrange
             var categoria = new Categoria();
-            
+
             //act
 
             //assert
@@ -23,14 +23,20 @@
             var categoria = new Categoria
             {
                 Descricao = "descricao",
+                Nome = "Nome",
                 Id = Guid.NewGuid()
             };
 
             //act
+            var categoria2 = categoria;
 
             //assert
             Assert.IsNotNull(categoria);
             Assert.AreEqual(typeof(Categoria), categoria.GetType());
+            Assert.AreEqual(categoria, categoria2);
+            Assert.AreEqual(categoria.Id, categoria2.Id);
+            Assert.AreEqual(categoria.Nome, categoria2.Nome);
+            Assert.AreEqual(categoria.Descricao, categoria2.Descricao);
         }
 
 
