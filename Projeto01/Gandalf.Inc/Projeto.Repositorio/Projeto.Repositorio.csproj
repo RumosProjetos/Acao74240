@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Projeto.Modelo\Projeto.Modelo.csproj" />
-    <ProjectReference Include="..\Projeto.Repositorio\Projeto.Repositorio.csproj" />
   </ItemGroup>
 
 </Project>

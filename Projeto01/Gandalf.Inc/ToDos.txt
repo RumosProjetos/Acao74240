@@ -1,0 +1,1 @@
+1- Adicionar testes automatizados para as demais classes do modelo
