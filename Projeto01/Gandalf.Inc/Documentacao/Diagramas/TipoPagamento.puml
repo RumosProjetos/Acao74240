@@ -1,0 +1,8 @@
+@startuml
+class TipoPagamento {
+    + TipoPagamento()
+    + Id : Guid <<get>> <<set>>
+    + Descricao : string? <<get>> <<set>>
+    + <<virtual>> Pagamentos : List<Pagamento> <<get>> <<set>>
+}
+@enduml

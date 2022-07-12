@@ -1,0 +1,91 @@
+@startuml Vendas
+
+class Categoria {
+    + Id 
+    + Nome
+    + Descricao    
+}
+
+class Produto {
+    + Id 
+    + CodigoBarras
+    + Nome
+    + UnidadeMedida
+    + QuantidadePorUnidade 
+    + PrecoUnitario 
+    + Descontinuado
+    + DataCriacao 
+    + DataModificacao     
+}
+
+class Estoque {
+    + Id 
+    + Quantidade 
+    + QuantidadeMinima 
+    + DataModificacao 
+    + DataCriacao    
+ }
+
+class Loja {
+    + Loja()
+    + Id 
+    + Nome 
+    + Endereco 
+    + Ativa
+    + DataModificacao 
+    + DataCriacao     
+ }
+
+ class PontoDeVenda {
+    + Id 
+    + Localizacao     
+}
+
+class Venda {
+    + Id 
+    + DataModificacao 
+    + DataCriacao 
+    + Pago
+}
+
+class DetalhesDaVenda {
+    + Id 
+    + Seq     
+    + Quantidade 
+    + PrecoUnitario 
+    + TotalDaNota
+    + DataCriacao 
+}
+
+class Utilizador {
+    + Id 
+    + Login 
+    + Senha 
+    + Nome 
+}
+
+class TipoPagamento {
+    + Id 
+    + Descricao
+}
+
+class Pagamento {
+    + Id 
+    + Seq
+    + ValorPago 
+    + DataCriacao   
+}
+
+' Relacoes
+Categoria "1" *-- "0..*" Produto : Possui
+Estoque "1" *-- "0..*" Produto : Possui
+Loja "1" *-- "0..*" Estoque : Possui
+Loja "1" *-- "0..*" PontoDeVenda : Possui
+Loja "1" *-- "0..*" Venda : Realiza
+PontoDeVenda "1" *-- "0..*" Venda : Realiza
+Venda "1" *-- "1..*" DetalhesDaVenda : Possui
+DetalhesDaVenda "1" *-- "1..*" Produto : Possui
+Utilizador  "1" *-- "0..*" Venda : Realiza
+TipoPagamento  "1" *-- "0..*" Pagamento : Possui
+Loja "1" *-- "0..*" Pagamento : Possui
+@enduml

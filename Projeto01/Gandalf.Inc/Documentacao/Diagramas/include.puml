@@ -1,0 +1,12 @@
+@startuml
+!include .\\Categoria.puml
+!include .\\DetalhesDaVenda.puml
+!include .\\Estoque.puml
+!include .\\Loja.puml
+!include .\\Pagamento.puml
+!include .\\PontoDeVenda.puml
+!include .\\Produto.puml
+!include .\\TipoPagamento.puml
+!include .\\Utilizador.puml
+!include .\\Venda.puml
+@enduml

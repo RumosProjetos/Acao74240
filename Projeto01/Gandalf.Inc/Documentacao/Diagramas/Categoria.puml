@@ -1,0 +1,9 @@
+@startuml
+class Categoria {
+    + Categoria()
+    + Id : Guid <<get>> <<set>>
+    + Nome : string? <<get>> <<set>>
+    + Descricao : string? <<get>> <<set>>
+    + <<virtual>> Produtos : List<Produto> <<get>> <<set>>
+}
+@enduml

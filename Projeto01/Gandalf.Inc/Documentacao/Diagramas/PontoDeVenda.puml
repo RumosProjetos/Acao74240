@@ -1,0 +1,9 @@
+@startuml
+class PontoDeVenda {
+    + PontoDeVenda()
+    + Id : Guid <<get>> <<set>>
+    + Localizacao : string? <<get>> <<set>>
+    + <<virtual>> Loja : Loja? <<get>> <<set>>
+    + <<virtual>> Vendas : List<Venda> <<get>> <<set>>
+}
+@enduml

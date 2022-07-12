@@ -1,0 +1,10 @@
+@startuml
+class Utilizador {
+    + Utilizador()
+    + Id : Guid <<get>> <<set>>
+    + Login : string? <<get>> <<set>>
+    + Senha : string? <<get>> <<set>>
+    + Nome : string? <<get>> <<set>>
+    + Vendas : List<Venda> <<get>> <<set>>
+}
+@enduml

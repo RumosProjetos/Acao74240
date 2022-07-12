@@ -1,0 +1,16 @@
+@startuml
+class Produto {
+    + Produto()
+    + Id : Guid <<get>> <<set>>
+    + CodigoBarras : string? <<get>> <<set>>
+    + Nome : string? <<get>> <<set>>
+    + UnidadeMedida : string? <<get>> <<set>>
+    + QuantidadePorUnidade : decimal <<get>> <<set>>
+    + PrecoUnitario : decimal <<get>> <<set>>
+    + Descontinuado : bool? <<get>> <<set>>
+    + DataCriacao : DateTime? <<get>> <<set>>
+    + DataModificacao : DateTime? <<get>> <<set>>
+    + <<virtual>> Categoria : Categoria? <<get>> <<set>>
+    + <<virtual>> Estoques : List<Estoque> <<get>> <<set>>
+}
+@enduml
