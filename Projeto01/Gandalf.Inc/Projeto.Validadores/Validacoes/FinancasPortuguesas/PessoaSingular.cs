@@ -1,4 +1,4 @@
-﻿namespace Validadores.FinancasPortuguesas
+﻿namespace Projeto.Validadores.Validacoes.FinancasPortuguesas
 {
     public class PessoaSingular : NumeroIdentificacaoFiscal
     {

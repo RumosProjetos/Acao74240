@@ -1,14 +1,11 @@
-using System.Text;
-using Validadores.ReceitaFederalBrasileira;
-
-namespace Validadores.Tests.ReceitaFederalBrasileira
+namespace Projeto.Tests.Validacoes.ReceitaFederalBrasileira
 {
     [TestClass]
     public class CadastroPessoaFisicaTests
     {
-        [TestMethod] 
+        [TestMethod]
         public void CpfDeveEstarValido()
-        { 
+        {
             //arrange
             var cpf = new CadastroPessoaFisica();
 
@@ -60,7 +57,7 @@ namespace Validadores.Tests.ReceitaFederalBrasileira
             //assert
             Assert.IsTrue(estaValido);
         }
-        
+
 
         [TestMethod]
         public void DeveEstarFormatado()

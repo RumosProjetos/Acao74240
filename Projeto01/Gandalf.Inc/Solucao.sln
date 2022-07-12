@@ -12,6 +12,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Tests", "Projeto.Tests\Projeto.Tests.csproj", "{380A9EA0-FBC2-49BF-9818-00F9B00B418F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacao", "Documentacao", "{5BADECB3-A7A1-4845-9903-FDDE555A2D2D}"
+	ProjectSection(SolutionItems) = preProject
+		Documentacao\Definicao.pdf = Documentacao\Definicao.pdf
+		Documentacao\DiagramaUml.png = Documentacao\DiagramaUml.png
+		Documentacao\DiagramaUml.puml = Documentacao\DiagramaUml.puml
+		Documentacao\ERDiagram.png = Documentacao\ERDiagram.png
+		Documentacao\Número_de_identificação_fiscal.pdf = Documentacao\Número_de_identificação_fiscal.pdf
+		Documentacao\RegrasCartaoCredito.docx = Documentacao\RegrasCartaoCredito.docx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Validadores", "Projeto.Validadores\Projeto.Validadores.csproj", "{33DE1D30-5A40-4B50-A030-29FFA3204044}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +45,10 @@ Global
 		{380A9EA0-FBC2-49BF-9818-00F9B00B418F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{380A9EA0-FBC2-49BF-9818-00F9B00B418F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{380A9EA0-FBC2-49BF-9818-00F9B00B418F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DE1D30-5A40-4B50-A030-29FFA3204044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DE1D30-5A40-4B50-A030-29FFA3204044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DE1D30-5A40-4B50-A030-29FFA3204044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DE1D30-5A40-4B50-A030-29FFA3204044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿namespace Validadores
+﻿namespace Projeto.Validadores.Validacoes
 {
     public interface IValidavel
     {

@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Validadores.FinancasPortuguesas
+namespace Projeto.Validadores.Validacoes.FinancasPortuguesas
 {
     public abstract class NumeroIdentificacaoFiscal : Validador
     {

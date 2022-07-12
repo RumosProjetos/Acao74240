@@ -1,11 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projeto.Tests.Modelo
+﻿namespace Projeto.Tests.Modelo
 {
     [TestClass]
     public class ProdutoTests

@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Validadores.ReceitaFederalBrasileira
+namespace Projeto.Validadores.Validacoes.ReceitaFederalBrasileira
 {
     public class CadastroPessoaFisica : Validador
     {

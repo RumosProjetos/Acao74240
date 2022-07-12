@@ -1,6 +1,4 @@
-﻿using Validadores.ReceitaFederalBrasileira;
-
-namespace Validadores.Tests.ReceitaFederalBrasileira
+﻿namespace Projeto.Tests.Validacoes.ReceitaFederalBrasileira
 {
     [TestClass]
     public class CadastroNacionalPessoaJuridicaTests
@@ -60,7 +58,7 @@ namespace Validadores.Tests.ReceitaFederalBrasileira
             //assert
             Assert.IsTrue(estaValido);
         }
-        
+
         [TestMethod]
         public void DeveEstarFormatado()
         {

@@ -1,6 +1,4 @@
-using Validadores.FinancasPortuguesas;
-
-namespace Validadores.Tests.FinancasPortuguesas.NumeroIdentificacaoFiscal
+namespace Projeto.Tests.Validacoes.FinancasPortuguesas.NumeroIdentificacaoFiscal
 {
     [TestClass]
     public class PessoaSingularTests

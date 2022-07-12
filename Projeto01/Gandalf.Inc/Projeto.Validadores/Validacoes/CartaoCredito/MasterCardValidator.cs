@@ -1,6 +1,6 @@
-﻿namespace Validadores.GlobalLanguageOfBusiness
+﻿namespace Projeto.Validadores.Validacoes.CartaoCredito
 {
-    public class Ean13 : Validador
+    public class MasterCardValidator : Validador
     {
         public override bool EstaValido(string parametros)
         {
