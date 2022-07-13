@@ -4,9 +4,9 @@
 ### Sobre visibilidade de classes, propriedades e métodos:
  - **public**: Todos podem enxergar
  - **private**: Só podem ser vistos dentro da própria classe  
- -  **protected** - Só a classe e as filhas (que herdam da SuperClasse) conseguem ver
- - **internal (package**) - Só é visível dentro do mesmo namespace 
- - **sealed (final)** - Não pode ser herdada
+ -  **protected**: Só a classe e as filhas (que herdam da SuperClasse) conseguem ver
+ - **internal (package**): Só é visível dentro do mesmo namespace 
+ - **sealed (final)**: Não pode ser herdada
 
 ## Ferramentas Recomendadas:
  - **PlantUML**: https://plantuml.com/class-diagram
