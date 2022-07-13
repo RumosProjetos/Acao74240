@@ -11,7 +11,7 @@
 ## Ferramentas Recomendadas:
  - **PlantUML**: https://plantuml.com/class-diagram
  - **MermaidJS**: https://stackedit.io/app# / https://mermaid-js.github.io/mermaid/#/classDiagram
- - **LinqPAD**:  https://www.linqpad.net/
+ - **LINQPad**:  https://www.linqpad.net/
  - **WinMerge**: https://winmerge.org/
 
 ## Links Interessantes:
