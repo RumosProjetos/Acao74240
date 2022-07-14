@@ -32,8 +32,9 @@ namespace Projeto.Repositorio.Repositorio
             }
         }
 
-        public void Carregar(string path)
+        public void Carregar()
         {
+            string path = ConfigurationManager.AppSettings["Categorias"];
             if (File.Exists(path))
             {
                 var conteudo = File.ReadAllText(path);

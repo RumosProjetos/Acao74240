@@ -14,6 +14,6 @@
         void Apagar(Guid Id);
         void Atualizar(T TEntidade);
         void Salvar();
-        void Carregar(string path);
+        void Carregar();
     }
 }
