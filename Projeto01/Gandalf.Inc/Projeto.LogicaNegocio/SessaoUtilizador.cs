@@ -21,16 +21,16 @@ namespace Projeto.Tests.LogicaNegocio
         public bool ValidarUtilizador()
         {
             Utilizador utilizador = null;
-            if (!string.IsNullOrWhiteSpace(NomeUsuario) && !string.IsNullOrWhiteSpace(PalavraPasse))
-            {
-                var repo = new RepositorioUtilizadores();
-                utilizador = repo.ObterPorLoginESenha(NomeUsuario, PalavraPasse);
+            //if (!string.IsNullOrWhiteSpace(NomeUsuario) && !string.IsNullOrWhiteSpace(PalavraPasse))
+            //{
+            //    var repo = new RepositorioUtilizadores();
+            //    utilizador = repo.ObterPorLoginESenha(NomeUsuario, PalavraPasse);
 
-                if (utilizador != null)
-                {
-                    ValidadeDaSessao = DateTime.Now.AddMinutes(30);
-                }             
-            }
+            //    if (utilizador != null)
+            //    {
+            //        ValidadeDaSessao = DateTime.Now.AddMinutes(30);
+            //    }             
+            //}
 
             return utilizador != null;
         }
