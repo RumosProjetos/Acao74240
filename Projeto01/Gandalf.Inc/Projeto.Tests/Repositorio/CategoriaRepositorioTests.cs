@@ -3,6 +3,7 @@ using Projeto.Modelo;
 using Projeto.Repositorio.Repositorio;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace Projeto.Repositorio.Repositorio.Tests
     [TestClass()]
     public class CategoriaRepositorioTests
     {
+        const string caminhoMarteladoParaTestes = @"c:\temp\testes\categoria.json";
         List<Categoria> _listaParaTestes;
         [TestInitialize]
         public void Inicializador()
@@ -28,7 +30,6 @@ namespace Projeto.Repositorio.Repositorio.Tests
                  new Categoria {Id = new Guid("cfc72565-b115-4c94-93a6-ab7daf845420"), Nome = "Categoria 03", Descricao = "Categoria 03 Descricao"},
             };
         }
-
 
 
         [TestMethod()]
@@ -124,17 +125,42 @@ namespace Projeto.Repositorio.Repositorio.Tests
         {
             //arrange
             var repo = new CategoriaRepositorio(_listaParaTestes);
+            var appSettings = ConfigurationManager.AppSettings;
 
             //act
-            repo.Salvar();
+            repo.Salvar(caminhoMarteladoParaTestes);
 
-            //assert		
+            ////assert		
             Assert.IsNotNull(repo);
         }
 
-        /*
-        void Salvar();
-        void Carregar(); 
-         */
+
+        [TestMethod]
+        public void DeveCarregarOsDadosDasCategoriasAPartirDeArquivoTest()
+        {
+            //arrange
+            var repo = new CategoriaRepositorio(_listaParaTestes);
+            repo.Salvar(caminhoMarteladoParaTestes);
+
+            //act
+            repo.Carregar(caminhoMarteladoParaTestes);
+            var conteudo = repo.ObterTodos();
+
+            ////assert		
+            Assert.IsNotNull(conteudo);
+            Assert.AreEqual(3, conteudo.Count());
+        }
+
+
+
+
+        [TestCleanup]
+        public void LimparTesteAnteriores()
+        {
+            if (File.Exists(caminhoMarteladoParaTestes))
+            {
+                File.Delete(caminhoMarteladoParaTestes);
+            }
+        }
     }
 }

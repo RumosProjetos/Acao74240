@@ -32,12 +32,12 @@ namespace Projeto.Repositorio.Repositorio
             }
         }
 
-        public void Carregar()
+        public void Carregar(string caminho)
         {
-            string path = ConfigurationManager.AppSettings["Categorias"];
-            if (File.Exists(path))
+            //string path = ConfigurationManager.AppSettings["Categorias"];
+            if (File.Exists(caminho))
             {
-                var conteudo = File.ReadAllText(path);
+                var conteudo = File.ReadAllText(caminho);
                 if (!string.IsNullOrWhiteSpace(conteudo))
                 {
                     _categorias = JsonConvert.DeserializeObject<List<Categoria>>(conteudo);
@@ -64,17 +64,17 @@ namespace Projeto.Repositorio.Repositorio
             return _categorias.ToList();
         }
 
-        public void Salvar()
+        public void Salvar(string caminho)
         {
             var json = JsonConvert.SerializeObject(_categorias);
-            var caminho = ConfigurationManager.AppSettings["Categorias"];
+            //var caminho = ConfigurationManager.AppSettings["Categorias"];
             var path = Path.GetDirectoryName(caminho);
             if (caminho != null && !Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
             }
 
-            File.WriteAllText(path, json);  
+            File.WriteAllText(caminho, json);  
         }
     }
 }

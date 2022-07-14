@@ -13,7 +13,7 @@
         void InserirNovo(T TEntidade);
         void Apagar(Guid Id);
         void Atualizar(T TEntidade);
-        void Salvar();
-        void Carregar();
+        void Salvar(string path); //Solucao Temporaria, o ideal seria buscar de arquivo de configuracao
+        void Carregar(string path); //Solucao Temporaria, o ideal seria buscar de arquivo de configuracao
     }
 }
