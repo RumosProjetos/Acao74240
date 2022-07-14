@@ -12,5 +12,9 @@ namespace Projeto.Modelo
         public virtual PontoDeVenda? PontoDeVenda { get; set; }
         public virtual List<DetalhesDaVenda> DetalhesDasVendas { get; set; }
         public virtual Utilizador? Utilizador { get; set; }
+        public virtual Cliente? Cliente { get; set; }
+
+
+        public decimal TotalDaVenda => DetalhesDasVendas.Sum(x => x.Produto.PrecoParcial);
     }
 }

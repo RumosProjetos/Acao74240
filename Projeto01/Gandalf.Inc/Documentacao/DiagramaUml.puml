@@ -16,6 +16,7 @@ class Produto {
     + Descontinuado
     + DataCriacao 
     + DataModificacao     
+    + Marca
 }
 
 class Estoque {

@@ -1,3 +1,0 @@
-dotnet tool install --global PlantUmlClassDiagramGenerator
-
-puml-gen C:\Source\App1 C:\PlantUml\App1 -dir -excludePaths bin,obj,Properties

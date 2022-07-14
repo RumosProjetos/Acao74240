@@ -1,33 +1,18 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Projeto.Modelo;
-using Projeto.Repositorio.Repositorio;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projeto.Repositorio.Repositorio.Tests
+﻿namespace Projeto.Repositorio.Repositorio.Tests
 {
-    /*
-     a6e3e9b1-6d7c-491c-92d6-c20a4652e32d
-54aff385-d7d0-4a3b-9380-677a5c10d556
-     
-     */
-
     [TestClass()]
     public class CategoriaRepositorioTests
     {
         const string caminhoMarteladoParaTestes = @"c:\temp\testes\categoria.json";
         List<Categoria> _listaParaTestes;
+
         [TestInitialize]
         public void Inicializador()
         {
             _listaParaTestes = new List<Categoria> {
                  new Categoria {Id = new Guid("fbb6741d-b294-4e22-9f4f-fc30d3c31101"), Nome = "Categoria 01", Descricao = "Categoria 01 Descricao"},
                  new Categoria {Id = new Guid("a60a4f8d-8d17-4c82-afbd-f23fefc823e9"), Nome = "Categoria 02", Descricao = "Categoria 02 Descricao"},
-                 new Categoria {Id = new Guid("cfc72565-b115-4c94-93a6-ab7daf845420"), Nome = "Categoria 03", Descricao = "Categoria 03 Descricao"},
+                 new Categoria {Id = new Guid("cfc72565-b115-4c94-93a6-ab7daf845420"), Nome = "Categoria 03", Descricao = "Categoria 03 Descricao"}
             };
         }
 
@@ -125,8 +110,7 @@ namespace Projeto.Repositorio.Repositorio.Tests
         {
             //arrange
             var repo = new CategoriaRepositorio(_listaParaTestes);
-            var appSettings = ConfigurationManager.AppSettings;
-
+            
             //act
             repo.Salvar(caminhoMarteladoParaTestes);
 

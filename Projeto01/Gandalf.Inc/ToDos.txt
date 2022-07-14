@@ -1,3 +1,18 @@
 1- Adicionar testes automatizados para as demais classes do modelo
 2 - Criar repositorios para as demais classes do Modelo
 3 - Criar testes automatizados para os repositórios
+
+
+
+
+Loja do Marcelo
+Filial do Barreio
+NIF da Loja
+Data e Hora da Venda
+Dados do Cliente
+---------------------------------------------------
+Sapato Vermelho        10         5    |Parcial| 50
+Casaco Azul				1        45	   |Parcial| 45	
+Calças					2		 20	   |Parcial| 40
+....................................................
+Total											135

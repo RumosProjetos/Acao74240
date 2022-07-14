@@ -1,8 +1,4 @@
-﻿using Newtonsoft.Json;
-using Projeto.Modelo;
-using System.Configuration;
-
-namespace Projeto.Repositorio.Repositorio
+﻿namespace Projeto.Repositorio.Repositorio
 {
     public class CategoriaRepositorio : IRepositorio<Categoria>
     {
