@@ -19,8 +19,10 @@
  - **Repository Pattern**: https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 
 ## Sobre os exemplos de aula
-###  Programação Orientada a Objetos: Sapataria do Marcelo
-###  ADO Acesso a Dados: A Escolher. Sugestões: CRM, Controle de Produção de uma granja, Escola ...
+###  Programação Orientada a Objetos
+Sapataria do Marcelo
+###  ADO Acesso a Dados: A Escolher. 
+Sugestões: CRM, Controle de Produção de uma granja, Escola ...
 
 
 
