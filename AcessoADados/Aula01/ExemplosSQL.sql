@@ -38,3 +38,10 @@ declare @meuParametro varchar(50)
 set @meuParametro = 'Jonatas'
 Select * from Pessoa where Nome = @meuParametro
 
+--char(50) -- 'Batata' -- 50bytes -- NIF sempre tem 9 posições
+--varchar(50) -- 'Batata' -- 8bytes (2 bytes de posicao + tamanho) - redimensionavel de acordo com a informacao
+--nvarchar(50) --  'Batata' -- 16bytes  (preciso validar o tamanho) --Caracteres especiais
+
+
+
+
