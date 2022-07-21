@@ -69,5 +69,6 @@
     <Build Include="dbo\Views\VW_PessoasComTelefone.sql" />
     <Build Include="dbo\Tables\Ligacao.sql" />
     <Build Include="dbo\Views\VW_PessoasComEmail.sql" />
+    <Build Include="dbo\Views\VW_DataHoraAtual.sql" />
   </ItemGroup>
 </Project>
