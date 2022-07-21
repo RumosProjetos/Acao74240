@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ExemploADO
 {
-    public interface IRepositorio
+    public interface IRepositorio<T>
     {
-        List<Pessoa> ObterTodos();
-        Pessoa ObterPorId(Guid id);
-        void Criar(Pessoa pessoa);
-        void Atualizar(Guid id, Pessoa pessoa);
+        List<T> ObterTodos();
+        T ObterPorId(Guid id);
+        void Criar(T dados);
+        void Atualizar(Guid id, T dados);
         void Apagar(Guid id);
     }
 }
