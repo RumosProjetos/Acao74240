@@ -1,3 +1,3 @@
 ﻿CREATE VIEW [dbo].[VW_DataHoraAtual]
-	AS 
+AS 
 	SELECT GETDATE() AS DataAtual
