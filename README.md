@@ -17,6 +17,8 @@
 
 ## Links Interessantes:
  - **Repository Pattern**: https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
+ 
+  - **Microsoft Learn - DP900**: https://docs.microsoft.com/en-us/certifications/exams/dp-900
 
 ## Sobre os exemplos de aula
 ###  Programação Orientada a Objetos
