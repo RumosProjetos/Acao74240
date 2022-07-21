@@ -2,7 +2,7 @@
 - Explorando o SQLServer
 
 ## Aula 02
-- Introdução às bases de dados (DP900)
+- Introdução às bases de dados (DP900): https://docs.microsoft.com/pt-br/certifications/exams/dp-900
 
 ## Aula 03
 - SQLPROJ
