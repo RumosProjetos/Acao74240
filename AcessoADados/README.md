@@ -1,16 +1,16 @@
-##Aula 01
+## Aula 01
 - Explorando o SQLServer
 
-##Aula 02
+## Aula 02
 - Introdução às bases de dados (DP900)
 
-##Aula 03
+## Aula 03
 - SQLPROJ
 - Acesso a dados com ADO.NET - Frameork 4.X
 - Database First
 - Partial Classes
 
-##Aula 04
+## Aula 04
 - Entity Framework Core
 - Model
 - Code First
