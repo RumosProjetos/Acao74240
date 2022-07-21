@@ -63,10 +63,10 @@ as
 	left join contato as c on c.PessoaId = p.Id
 	where c.telefone is not null
 GO
-INSERT [dbo].[contato] ([Id], [Tipo], [Telefone], [PessoaId]) VALUES (N'8c569674-15c6-4553-b057-16c410983ce5', N'Telem髒el', N'999999999', N'95c3cb49-cf00-4caf-b4e4-3705db35c002')
-INSERT [dbo].[contato] ([Id], [Tipo], [Telefone], [PessoaId]) VALUES (N'01667e8e-c6ee-48eb-b6d2-3daa3e72bd23', N'Telem髒el', N'123456789', N'1366b9a3-d1ec-4057-b9e8-053ede8f71ab')
-INSERT [dbo].[contato] ([Id], [Tipo], [Telefone], [PessoaId]) VALUES (N'd568cedf-0efb-47d7-89f0-bb46b164c921', N'Telem髒el', N'44444444 ', N'95c3cb49-cf00-4caf-b4e4-3705db35c002')
-INSERT [dbo].[contato] ([Id], [Tipo], [Telefone], [PessoaId]) VALUES (N'ba90405c-7829-4eb9-898e-ea9891a5ea36', N'Telem髒el', N'555555555', N'95c3cb49-cf00-4caf-b4e4-3705db35c002')
+INSERT [dbo].[contato] ([Id], [Tipo], [Telefone], [PessoaId]) VALUES (N'8c569674-15c6-4553-b057-16c410983ce5', N'Telem贸vel', N'999999999', N'95c3cb49-cf00-4caf-b4e4-3705db35c002')
+INSERT [dbo].[contato] ([Id], [Tipo], [Telefone], [PessoaId]) VALUES (N'01667e8e-c6ee-48eb-b6d2-3daa3e72bd23', N'Telem贸vel', N'123456789', N'1366b9a3-d1ec-4057-b9e8-053ede8f71ab')
+INSERT [dbo].[contato] ([Id], [Tipo], [Telefone], [PessoaId]) VALUES (N'd568cedf-0efb-47d7-89f0-bb46b164c921', N'Telem贸vel', N'44444444 ', N'95c3cb49-cf00-4caf-b4e4-3705db35c002')
+INSERT [dbo].[contato] ([Id], [Tipo], [Telefone], [PessoaId]) VALUES (N'ba90405c-7829-4eb9-898e-ea9891a5ea36', N'Telem贸vel', N'555555555', N'95c3cb49-cf00-4caf-b4e4-3705db35c002')
 GO
 INSERT [dbo].[Endereco] ([Id], [Distrito], [Rua], [CodigoPostal], [CodigoPostalComplemento], [NumeroPorta], [PessoaId]) VALUES (N'e76534f5-1bed-493c-ba51-38a9e338a47b', N'Porto', NULL, NULL, NULL, NULL, N'85b5bf28-6685-4e7e-a627-8a7509d34e54')
 INSERT [dbo].[Endereco] ([Id], [Distrito], [Rua], [CodigoPostal], [CodigoPostalComplemento], [NumeroPorta], [PessoaId]) VALUES (N'7295dba3-eeca-43e6-b26c-7b72cd82d6f6', N'Sintra', NULL, NULL, NULL, NULL, N'1366b9a3-d1ec-4057-b9e8-053ede8f71ab')
@@ -83,13 +83,13 @@ INSERT [dbo].[Pessoa] ([Nome], [DataNascimento], [Id], [PosicaoAgenda]) VALUES (
 INSERT [dbo].[Pessoa] ([Nome], [DataNascimento], [Id], [PosicaoAgenda]) VALUES (N'Teste', NULL, N'85b5bf28-6685-4e7e-a627-8a7509d34e54', 11)
 INSERT [dbo].[Pessoa] ([Nome], [DataNascimento], [Id], [PosicaoAgenda]) VALUES (N'Jonatas', CAST(N'1984-05-29T00:00:00.000' AS DateTime), N'55e9c27d-0469-45f5-afb3-a6bb35dcdd64', 15)
 INSERT [dbo].[Pessoa] ([Nome], [DataNascimento], [Id], [PosicaoAgenda]) VALUES (N'Rui', CAST(N'1993-12-17T00:00:00.000' AS DateTime), N'bea7b80e-7a29-4bd0-a28c-dc80c5593d29', 7)
-INSERT [dbo].[Pessoa] ([Nome], [DataNascimento], [Id], [PosicaoAgenda]) VALUES (N'R鷅en', NULL, N'fb33f9c3-3eda-48b1-ae12-eb1cb7ffb7ee', 9)
+INSERT [dbo].[Pessoa] ([Nome], [DataNascimento], [Id], [PosicaoAgenda]) VALUES (N'R煤ben', NULL, N'fb33f9c3-3eda-48b1-ae12-eb1cb7ffb7ee', 9)
 INSERT [dbo].[Pessoa] ([Nome], [DataNascimento], [Id], [PosicaoAgenda]) VALUES (N'Marcelo', NULL, N'7012e2b4-a869-4555-a3d2-eba2fdb381f1', 14)
 SET IDENTITY_INSERT [dbo].[Pessoa] OFF
 GO
 ALTER TABLE [dbo].[contato] ADD  DEFAULT (newid()) FOR [Id]
 GO
-ALTER TABLE [dbo].[contato] ADD  DEFAULT ('Telem髒el') FOR [Tipo]
+ALTER TABLE [dbo].[contato] ADD  DEFAULT ('Telem贸vel') FOR [Tipo]
 GO
 ALTER TABLE [dbo].[Endereco] ADD  CONSTRAINT [DF_Endereco_Id]  DEFAULT (newid()) FOR [Id]
 GO
@@ -102,6 +102,4 @@ ALTER TABLE [dbo].[Endereco]  WITH CHECK ADD  CONSTRAINT [FK_Endereco_Pessoa] FO
 REFERENCES [dbo].[Pessoa] ([Id])
 GO
 ALTER TABLE [dbo].[Endereco] CHECK CONSTRAINT [FK_Endereco_Pessoa]
-GO
-ALTER DATABASE [exemplodb] SET  READ_WRITE 
 GO
