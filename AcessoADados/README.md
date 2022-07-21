@@ -7,10 +7,11 @@
 ## Aula 03
 - SQLPROJ
 - Acesso a dados com ADO.NET - Framework 4.X
-- Database First
-- Partial Classes
+- Dappper: https://dapper-plus.net/overview
 
 ## Aula 04
+- Database First
+- Partial Classes
 - Entity Framework Core
 - Model
 - Code First

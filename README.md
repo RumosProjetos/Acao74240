@@ -14,6 +14,8 @@
  - **LINQPad**:  https://www.linqpad.net/
  - **WinMerge**: https://winmerge.org/
  - **SQLServer Management Studio**: https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+ - **Dapper**: https://dapper-plus.net/overview
+ - **DevToys**: https://apps.microsoft.com/store/detail/devtoys/9PGCV4V3BK4W?hl=pt-br&gl=BR
 
 ## Links Interessantes:
  - **Repository Pattern**: https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
