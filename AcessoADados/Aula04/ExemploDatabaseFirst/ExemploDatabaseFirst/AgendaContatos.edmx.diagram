@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3e9bfa3602a744bcbf1eee4be83d88a5" Name="Diagram1">
+        <EntityTypeShape EntityType="Agenda.Contato" Width="2.875" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agenda.Endereco" Width="2.875" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agenda.Ligacao" Width="2.625" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agenda.Pessoa" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="Agenda.FK__Contato__PessoaI__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="Agenda.FK_Endereco_Pessoa" ManuallyRouted="false" />
+        <AssociationConnector Association="Agenda.FK__Ligacao__PessoaI__35BCFE0A" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Agenda.TabelaExemplo" Width="1.5" PointX="6.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
