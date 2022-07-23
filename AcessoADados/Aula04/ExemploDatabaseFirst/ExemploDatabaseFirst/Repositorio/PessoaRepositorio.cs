@@ -10,17 +10,33 @@ namespace ExemploDatabaseFirst.Repositorio
     {
         public void Apagar(Guid id)
         {
-            throw new NotImplementedException();
+            var db = new CaminhoDB();
+            var pessoa = db.Pessoa.FirstOrDefault(x => x.Id == id);
+            if (pessoa != null)
+            {
+                //Normalmente não é necessário, mas temos um bug no nosso modelo.
+                db.Endereco.RemoveRange(pessoa.Endereco);
+                db.Contato.RemoveRange(pessoa.Contato);
+
+                db.Pessoa.Remove(pessoa);
+                db.SaveChanges();
+            }
         }
 
         public void Atualizar(Guid id, Pessoa dados)
         {
-            throw new NotImplementedException();
+            var db = new CaminhoDB();
+            var pessoa = db.Pessoa.FirstOrDefault(x => x.Id == id);
+            pessoa.Nome = dados.Nome;
+            pessoa.DataNascimento = dados.DataNascimento;
+            db.SaveChanges();
         }
 
         public void Criar(Pessoa dados)
         {
-            throw new NotImplementedException();
+            var db = new CaminhoDB();
+            db.Pessoa.Add(dados);
+            db.SaveChanges();
         }
 
         public List<Pessoa> ObterOsPrimeiros(int quantidadeDeLinhas)
@@ -37,6 +53,13 @@ namespace ExemploDatabaseFirst.Repositorio
         {
             var db = new CaminhoDB();
             var pessoa = db.Pessoa.FirstOrDefault(p => p.Id == id);
+            return pessoa;
+        }
+
+        public Pessoa ObterPorNome(string nome)
+        {
+            var db = new CaminhoDB();
+            var pessoa = db.Pessoa.FirstOrDefault(p => p.Nome == nome);
             return pessoa;
         }
 
