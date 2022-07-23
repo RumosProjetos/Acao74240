@@ -36,7 +36,24 @@ namespace ExemploDatabaseFirst.Repositorio
         {
             var db = new CaminhoDB();
             db.Pessoa.Add(dados);
+            //Commit 
             db.SaveChanges();
+
+            //Em caso de Rollback
+            //db.Dispose();
+        }
+
+        public List<Pessoa> ObterAsPessoasComIdadeMaiorDoQue(int idade)
+        {
+            var db = new CaminhoDB();
+            //Exemplo LINQ tradicional
+            var pessoas = from p in db.Pessoa
+                          where p.Idade >= idade
+                          select p;
+            //Seria o mesmo que:
+            //var pessoas = db.pessoa.where(p => p.Idade >= idade);
+
+            return pessoas.ToList();
         }
 
         public List<Pessoa> ObterOsPrimeiros(int quantidadeDeLinhas)

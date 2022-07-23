@@ -10,8 +10,10 @@ namespace ExemploDatabaseFirst.Repositorio
     {
         List<T> ObterTodos();
         List<T> ObterOsPrimeiros(int quantidadeDeLinhas);
+        List<T> ObterAsPessoasComIdadeMaiorDoQue(int idade);
         T ObterPorId(Guid id);
         T ObterPorNome(string nome);
+
         void Criar(T dados);
         void Atualizar(Guid id, T dados);
         void Apagar(Guid id);
