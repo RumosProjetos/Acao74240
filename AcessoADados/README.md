@@ -7,7 +7,7 @@
 ## Aula 03
 - SQLPROJ
 - Acesso a dados com ADO.NET - Framework 4.X
-- Dappper: https://dapper-plus.net/overview
+- Dapper: https://dapper-plus.net/overview
 
 ## Aula 04
 - Database First
