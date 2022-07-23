@@ -14,17 +14,32 @@ namespace ExemploADO.Repositorios
     {
         public void Apagar(Guid id)
         {
-            throw new NotImplementedException();
+            var stringConexao = ConfigurationManager.ConnectionStrings["Agenda"].ToString();
+            using (var connection = new SqlConnection(stringConexao))
+            {
+                var comando = "DELETE FROM Contato WHERE Id = @id";
+                connection.ExecuteScalar(comando, new { Id = id });
+            }
         }
 
         public void Atualizar(Guid id, Contato dados)
         {
-            throw new NotImplementedException();
+            var stringConexao = ConfigurationManager.ConnectionStrings["Agenda"].ToString();
+            using (var connection = new SqlConnection(stringConexao))
+            {
+                var comando = "UPDATE CONTATO SET Tipo = @tipo, Telefone = @telefone, EnderecoEletronico = @email WHERE Id = @idContato";
+                connection.ExecuteScalar(comando, new { tipo = dados.Tipo, telefone = dados.Telefone, email = dados.EnderecoEletronico, idContato = id});
+            }
         }
 
         public void Criar(Contato dados)
         {
-            throw new NotImplementedException();
+            var stringConexao = ConfigurationManager.ConnectionStrings["Agenda"].ToString();
+            using (var connection = new SqlConnection(stringConexao))
+            {
+                var comando = "INSERT INTO Contato (Tipo, Telefone, PessoaId, EnderecoEletronico) VALUES (@tipo, @telefone, @pessoaId, @email)";
+                connection.ExecuteScalar(comando, new { tipo = dados.Tipo, telefone = dados.Telefone, pessoaId = dados.PessoaId, email = dados.EnderecoEletronico });
+            }
         }
 
         public Contato ObterPorId(Guid id)
@@ -35,7 +50,14 @@ namespace ExemploADO.Repositorios
             using (var connection = new SqlConnection(stringConexao))
             {
                 var comando = "SELECT c.*, p.nome AS NomePessoa FROM Contato c LEFT JOIN Pessoa p ON p.Id = c.PessoaId WHERE c.Id = @id";
-                resultado = connection.QuerySingle<Contato>(comando, new { Id = id });
+                try
+                {
+                    resultado = connection.QuerySingle<Contato>(comando, new { Id = id });
+                }
+                catch (Exception)
+                {
+                    //Apenas em modo didático
+                }                
             }
 
             return resultado;

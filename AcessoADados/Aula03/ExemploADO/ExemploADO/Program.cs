@@ -13,11 +13,9 @@ namespace ExemploADO
         static void Main(string[] args)
         {
             ExemploRepositorioContatos();
-            
             ExemploRepositorioPessoas();
 
             Console.ReadLine();
-
         }
 
         private static void ExemploRepositorioContatos()
@@ -25,6 +23,26 @@ namespace ExemploADO
             var repo = new ContatoRepositorio();
             var contatoSelecionado = repo.ObterPorId(new Guid("D568CEDF-0EFB-47D7-89F0-BB46B164C921"));
 
+            repo.Apagar(new Guid("BA90405C-7829-4EB9-898E-EA9891A5EA36"));
+
+            
+            var contatoNovo = new Contato {
+                PessoaId = new Guid("EC4DDD9F-25D8-4B40-AF95-018406A5DE75"), //ScoobyDoo.Id (Chave primária)
+                Telefone = "11111111",
+                EnderecoEletronico = "pessoa@email.com",
+                Tipo = "Telefone"
+            };
+            repo.Criar(contatoNovo);
+
+            var idContatoScoobyDoo = new Guid("25751ECD-B447-4FBD-BF59-A820A8D03C98");
+            var dadosNovosDeContato = new Contato
+            {
+                Telefone = "22222222",
+                EnderecoEletronico = "scoobydoo@email.com",
+                Tipo = "Telefone"
+            };
+
+            repo.Atualizar(idContatoScoobyDoo, dadosNovosDeContato);
 
             var contatos = repo.ObterTodos();
 
