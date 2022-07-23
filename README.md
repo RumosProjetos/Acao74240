@@ -14,7 +14,7 @@
  - **LINQPad**:  https://www.linqpad.net/
  - **WinMerge**: https://winmerge.org/
  - **SQLServer Management Studio**: https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
- - **Dapper**: https://dapper-plus.net/overview
+ - **Dapper**: https://dapper-plus.net/overview / https://riptutorial.com/dapper
  - **DevToys**: https://apps.microsoft.com/store/detail/devtoys/9PGCV4V3BK4W?hl=pt-br&gl=BR
 
 ## Links Interessantes:
