@@ -24,8 +24,8 @@ namespace ExemploDatabaseFirst
             //var scooby = repo.ObterPorId(new Guid("25751ECD-B447-4FBD-BF59-A820A8D03C98"));
             //Console.WriteLine(scooby.Nome);
 
-            //var barney = new Pessoa { Nome = "Barney", DataNascimento = new DateTime(1960, 01, 01), Id = Guid.NewGuid() };
-            //repo.Criar(barney);
+            var barney = new Pessoa { Nome = "Barney", DataNascimento = new DateTime(1960, 01, 01), Id = Guid.NewGuid() };
+            repo.Criar(barney);
 
             //var enderecoFred = new List<Endereco> { new Endereco { Distrito = "Bedrock", CodigoPostal = "2000", CodigoPostalComplemento = "100", Rua = "Exemplo", Id = Guid.NewGuid() } };
             //var fred = new Pessoa { Nome = "Fred", DataNascimento = new DateTime(1960, 01, 01), Id = Guid.NewGuid(), Endereco = enderecoFred };
@@ -58,8 +58,8 @@ namespace ExemploDatabaseFirst
             //repo.Apagar(idVilma);
 
 
-            var idFred = repo.ObterPorNome("Fred").Id;
-            repo.Atualizar(idFred, new Pessoa { DataNascimento = new DateTime(1960, 9, 30), Nome = "Fred Flintstone" });
+            //var idFred = repo.ObterPorNome("Fred").Id;
+            //repo.Atualizar(idFred, new Pessoa { DataNascimento = new DateTime(1960, 9, 30), Nome = "Fred Flintstone" });
         }
     }
 }
