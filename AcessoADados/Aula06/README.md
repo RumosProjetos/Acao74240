@@ -1,8 +1,7 @@
-## Aula 06
-- Model
+# Aula 06
+## Model
 - Migrations: https://docs.microsoft.com/en-us/learn/modules/persist-data-ef-core/ 
 - Validação de Modelos : https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-6.0
-
 
 ```java
 public class Person
@@ -23,9 +22,26 @@ public class Person
 }
 
 ```
-
-
-
-
 - Data Annotation: https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-6.0
 - Migrando para o SQLServer
+
+## Modelo Lógico
+
+```mermaid
+erDiagram
+    Pizza {
+        int Id
+        string Name
+        string Description
+    }
+    Sause {
+        int Id
+        bool IsVegan
+    }
+    Topping {
+        int Id
+        string Name
+        int Calories
+    }
+    Pizza ||--o{ Sause : Possui
+    Pizza ||--o{ Topping : Possui
