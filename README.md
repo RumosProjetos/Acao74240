@@ -28,6 +28,7 @@
 - Sapataria do Marcelo: https://github.com/RumosProjetos/Acao74240/tree/main/ProgramacaoOrientadaAobjetos/Aula09/Sapataria
 ###  ADO Acesso a Dados:  
 - Agenda de Contatos: https://github.com/RumosProjetos/Acao74240/blob/main/AcessoADados/Aula01/AgendaContatos.sql
+- Pizzaria: https://github.com/RumosProjetos/Acao74240/blob/main/AcessoADados/Aula05
 - Sapataria do Marcelo
 
 
