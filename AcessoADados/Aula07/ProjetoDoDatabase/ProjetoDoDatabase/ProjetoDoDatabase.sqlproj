@@ -67,5 +67,7 @@
     <Build Include="dbo\Tables\Customers.sql" />
     <Build Include="dbo\Tables\Toppings.sql" />
     <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+    <Build Include="dbo\Tables\Carriers.sql" />
+    <Build Include="dbo\Tables\PK_Entregadores.sql" />
   </ItemGroup>
 </Project>
