@@ -4,6 +4,7 @@ using ContosoPizza.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoPizza.Migrations
 {
     [DbContext(typeof(PizzaContext))]
-    partial class PizzaContextModelSnapshot : ModelSnapshot
+    [Migration("20220730111246_ServicoEntregaCorrigido")]
+    partial class ServicoEntregaCorrigido
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +32,7 @@ namespace ContosoPizza.Migrations
 
                     b.Property<DateTime?>("DataContratacao")
                         .HasColumnType("datetime2")
-                        .HasColumnName("DataDeAssinaturaDeContrato");
+                        .HasColumnName("Data De Assinatura De Contrato");
 
                     b.Property<int>("DiaDeFolga")
                         .HasColumnType("int")

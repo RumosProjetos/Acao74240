@@ -24,3 +24,7 @@
 
 8 - Exemplo conexão de produção
 	Server=tcp:sqldb-rumos-acao74240.database.windows.net,1433;Initial Catalog=sqldb-formacao-learn-uks-001;Persist Security Info=False;User ID=rumos;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;	
+	
+	
+9 - Usar ConnectionString a partir do AppSettings
+	builder.Services.AddDbContext<PizzaContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("PizzariaAzure")));	

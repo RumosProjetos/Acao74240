@@ -8,3 +8,9 @@
 );
 GO
 CREATE INDEX [IX_Pizzas_SauceId] ON [Pizzas] ([SauceId]);
+GO
+ALTER TABLE [Pizzas] ADD CONSTRAINT [FK_Pizzas_Carriers_CarrierModeloDoCarro] FOREIGN KEY ([CarrierModeloDoCarro]) REFERENCES [Carriers] ([ModeloDoCarro]);
+GO
+ALTER TABLE [Pizzas] ADD CONSTRAINT [FK_Pizzas_Entregadores_CarrierModeloDoCarro] FOREIGN KEY ([CarrierModeloDoCarro]) REFERENCES [Entregadores] ([ModeloDoCarro]);
+GO
+CREATE INDEX [IX_Pizzas_CarrierModeloDoCarro] ON [Pizzas] ([CarrierModeloDoCarro]);

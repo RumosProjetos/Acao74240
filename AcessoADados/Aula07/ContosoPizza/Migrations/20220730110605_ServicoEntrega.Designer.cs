@@ -4,6 +4,7 @@ using ContosoPizza.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoPizza.Migrations
 {
     [DbContext(typeof(PizzaContext))]
-    partial class PizzaContextModelSnapshot : ModelSnapshot
+    [Migration("20220730110605_ServicoEntrega")]
+    partial class ServicoEntrega
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,12 +31,10 @@ namespace ContosoPizza.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("DataContratacao")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("DataDeAssinaturaDeContrato");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("DiaDeFolga")
-                        .HasColumnType("int")
-                        .HasColumnName("FolgaDoEntregador");
+                        .HasColumnType("int");
 
                     b.Property<string>("NomeEntregador")
                         .IsRequired()
@@ -43,7 +43,7 @@ namespace ContosoPizza.Migrations
 
                     b.HasKey("ModeloDoCarro");
 
-                    b.ToTable("Entregadores");
+                    b.ToTable("Carriers");
                 });
 
             modelBuilder.Entity("ContosoPizza.Models.Customer", b =>

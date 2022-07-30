@@ -1,30 +1,22 @@
-﻿
-IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
-BEGIN
-    --The following statement was imported into the database project as a schema object and named dbo.__EFMigrationsHistory.
---CREATE TABLE [__EFMigrationsHistory] (
---        [MigrationId] nvarchar(150) NOT NULL,
---        [ProductVersion] nvarchar(32) NOT NULL,
---        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
---    );
-
-END;
-GO
-
-BEGIN TRANSACTION;
-GO
-
-INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20220730091915_DatabaseInicial', N'6.0.7');
-GO
-
-COMMIT;
-GO
-
 BEGIN TRANSACTION;
 GO
 
 ALTER TABLE [Pizzas] ADD [CarrierModeloDoCarro] uniqueidentifier NULL;
+GO
+
+CREATE TABLE [Carriers] (
+    [ModeloDoCarro] uniqueidentifier NOT NULL,
+    [NomeEntregador] nvarchar(150) NOT NULL,
+    [DataContratacao] datetime2 NULL,
+    [DiaDeFolga] int NOT NULL,
+    CONSTRAINT [PK_Carriers] PRIMARY KEY ([ModeloDoCarro])
+);
+GO
+
+CREATE INDEX [IX_Pizzas_CarrierModeloDoCarro] ON [Pizzas] ([CarrierModeloDoCarro]);
+GO
+
+ALTER TABLE [Pizzas] ADD CONSTRAINT [FK_Pizzas_Carriers_CarrierModeloDoCarro] FOREIGN KEY ([CarrierModeloDoCarro]) REFERENCES [Carriers] ([ModeloDoCarro]);
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
@@ -52,6 +44,12 @@ GO
 EXEC sp_rename N'[Entregadores].[DataContratacao]', N'Data De Assinatura De Contrato', N'COLUMN';
 GO
 
+ALTER TABLE [Entregadores] ADD CONSTRAINT [PK_Entregadores] PRIMARY KEY ([ModeloDoCarro]);
+GO
+
+ALTER TABLE [Pizzas] ADD CONSTRAINT [FK_Pizzas_Entregadores_CarrierModeloDoCarro] FOREIGN KEY ([CarrierModeloDoCarro]) REFERENCES [Entregadores] ([ModeloDoCarro]);
+GO
+
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
 VALUES (N'20220730111246_ServicoEntregaCorrigido', N'6.0.7');
 GO
@@ -71,3 +69,4 @@ GO
 
 COMMIT;
 GO
+

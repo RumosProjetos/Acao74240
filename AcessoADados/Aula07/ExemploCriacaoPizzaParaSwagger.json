@@ -1,0 +1,24 @@
+{
+  "id": 0,
+  "name": "Amendoin",
+  "price": 5,
+  "sauce": {
+    "id": 0,
+    "name": "mel",
+    "isVegan": false
+  },
+  "toppings": [
+    {
+      "id": 0,
+      "name": "amendoin",
+      "calories": 10000,
+      "isVegan": true
+    },
+{
+      "id": 0,
+      "name": "castanha de caju",
+      "calories": 10000,
+      "isVegan": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+﻿ALTER TABLE [Entregadores] ADD CONSTRAINT [PK_Entregadores] PRIMARY KEY ([ModeloDoCarro]);

@@ -13,5 +13,6 @@ namespace ContosoPizza.Data
         public DbSet<Topping> Toppings => Set<Topping>();
         public DbSet<Sauce> Sauces => Set<Sauce>();
         public DbSet<Customer> Customers => Set<Customer>();
+        public DbSet<Carrier> Carriers => Set<Carrier>();
     }
 }
