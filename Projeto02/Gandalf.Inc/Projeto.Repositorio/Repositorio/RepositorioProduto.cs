@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projeto.Repositorio.Repositorio
+﻿namespace Projeto.Repositorio.Repositorio
 {
     public class RepositorioProduto : IRepositorio<Produto>, IBuscaProdutos
     {
