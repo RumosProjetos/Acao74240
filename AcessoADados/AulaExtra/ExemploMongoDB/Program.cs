@@ -10,40 +10,45 @@ var db = client.GetDatabase("sapataria");
 
 
 // Container reference with creation if it does not alredy exist
-var _products = db.GetCollection<Produto>("produtos_novo");
+var _products = db.GetCollection<Produto>("produtos");
 
 
-var sapato = new Produto{
-    Id = Guid.NewGuid().ToString(),
-    Nome = "Nike",
-    QuantidadeEstoque = 100,
-    Categoria = new Categoria {
-        Id = Guid.NewGuid().ToString(),
-        Nome = "Tênis"
-    }
-};
-
-
-_products.InsertOne(sapato);
-
-
-
-
- var sapatosAdidas = _products.Find(x => x.Categoria.Nome == "Tênis" && x.Nome == "Adidas");
-
- foreach (var item in sapatosAdidas.ToList())
- {
-    System.Console.WriteLine(item.Nome);   
- }
-
-
-
-var products = _products.AsQueryable().Where(p => p.Categoria.Nome == "Tênis");
-Console.WriteLine("Multiple products:");
-foreach (var prod in products)
+for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine(prod.Nome);
+    var sapato = new Produto
+    {
+        Id = Guid.NewGuid().ToString(),
+        Nome = "Adidas",
+        QuantidadeEstoque = i,
+        Preco = 10M,
+        CodigoBarras = "12345",
+        Categoria = new Categoria
+        {
+            Id = Guid.NewGuid().ToString(),
+            Nome = "Tênis"
+        }
+    };
+
+    _products.InsertOne(sapato);
 }
+
+
+
+var sapatosAdidas = _products.Find(x => x.Categoria.Nome == "Tênis" && x.Nome == "Adidas");
+
+foreach (var item in sapatosAdidas.ToList().Take(50).OrderByDescending(x => x.Preco))
+{
+    System.Console.WriteLine($"{item.Nome} - {item.Preco}");
+}
+
+
+
+// var products = _products.AsQueryable().Where(p => p.Categoria.Nome == "Tênis");
+// Console.WriteLine("Multiple products:");
+// foreach (var prod in products)
+// {
+//     Console.WriteLine(prod.Nome);
+// }
 
 
 Console.WriteLine("Terminou");
