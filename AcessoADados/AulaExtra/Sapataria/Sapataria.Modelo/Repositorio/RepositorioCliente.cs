@@ -30,7 +30,8 @@ namespace Sapataria.Modelo.Repositorio
 
         public void Apagar(string id)
         {
-            _clientes.DeleteOne(id);
+            var filter = Builders<Cliente>.Filter.Eq("id", id);
+            _clientes.DeleteOne(filter);
         }
 
         public void Atualizar(string id, Cliente item)
