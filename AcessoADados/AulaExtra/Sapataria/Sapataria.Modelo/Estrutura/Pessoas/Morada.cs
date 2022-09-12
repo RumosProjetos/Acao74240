@@ -1,7 +1,12 @@
 ﻿namespace Sapataria.Modelo.Estrutura.Pessoas
 {
-    public struct Morada
+    public class Morada
     {
+        public Morada()
+        {
+            CodigoPostal = new CodigoPostal();
+        }
+
         public string Rua { get; set; }
         public string NumeroPorta { get; set; }
         public string Complemento { get; set; }

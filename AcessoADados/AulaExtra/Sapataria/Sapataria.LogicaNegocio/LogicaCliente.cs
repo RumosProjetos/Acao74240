@@ -53,6 +53,18 @@ namespace Sapataria.LogicaNegocio
             return repositorio.Listar();
         }
 
+        public void AtualizarCliente(string id, Cliente dadosNovos)
+        {
+            var repositorio = new RepositorioCliente();
+            repositorio.Atualizar(id, dadosNovos);
+        }
+
+        public void ApagarCliente(string id)
+        {
+            var repositorio = new RepositorioCliente();
+            repositorio.Apagar(id);
+        }
+
 
         #endregion
     }

@@ -14,7 +14,7 @@ namespace Sapataria.Modelo.Estrutura.Pessoas
         /// </summary>
         public Cliente()
         {
-
+            Morada = new Morada();        
         }
 
         /// <summary>
