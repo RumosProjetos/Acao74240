@@ -44,8 +44,7 @@ namespace Sapataria.LogicaNegocio
         public void AdicionarCliente(Cliente cliente)
         {
             var repositorio = new RepositorioCliente();
-            repositorio.Adicionar(cliente);
-            repositorio.Salvar();
+            repositorio.Adicionar(cliente);           
         }
 
         public List<Cliente> ListarClientes()
