@@ -1,0 +1,16 @@
+    /* Precedencia 2 - Nome/Identificador */
+    #boxVendas_exemplo {
+        color: navy;
+        margin-left: 20px;
+    }
+
+    /* Precedencia 3 - Classe do Objeto */
+    .exemplo_exemplo{
+        background-color: yellow;
+        font-size: 100px;
+    }
+
+    /* Precedencia 4 - Tipo de objeto (DOM) */
+    h3_exemplo {
+        background-color: green;
+    }

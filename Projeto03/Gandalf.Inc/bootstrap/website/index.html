@@ -69,26 +69,6 @@
         }
     </script>
 
-    <style>
-        /* Precedencia 2 - Nome/Identificador */
-        #boxVendas {
-            color: navy;
-            margin-left: 20px;
-        }
-
-        /* Precedencia 3 - Classe do Objeto */
-        .exemplo{
-            background-color: yellow;
-            font-size: 100px;
-        }
-
-        /* Precedencia 4 - Tipo de objeto (DOM) */
-        h3 {
-            background-color: green;
-        }
-
-    </style>
-
 </head>
 
 <body>
@@ -103,18 +83,21 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" id="navHome" href="../index.html" data-unsp-sanitized="clean">Home</a>
+                        <a class="nav-link" id="navHome" href="#" data-unsp-sanitized="clean">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="navProdutos" href="produtos.html"
+                        <a class="nav-link" id="navProdutos" href="produtos/produtos.html"
                             data-unsp-sanitized="clean">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="navVendas" href="../vendas/vendas.html"
+                        <a class="nav-link" id="navVendas" href="vendas/vendas.html"
                             data-unsp-sanitized="clean">Vendas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="navRelatorios" href="../relatorios/relatorios.html"
+                        <a class="nav-link" id="navClientes" href="clientes/clientes.html" data-unsp-sanitized="clean">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navRelatorios" href="relatorios/relatorios.html"
                             data-unsp-sanitized="clean">Relatórios</a>
                     </li>
                 </ul>
@@ -173,13 +156,13 @@
                         <div class="col-lg-3 col-6">
                             <div class="card text-white bg-success mb-3">
                                 <div class="inner">
-                                    <h3 data-unsp-sanitized="clean" id="boxNovosClientes" style="color:red">13</h3>
+                                    <h3 data-unsp-sanitized="clean" id="boxNovosClientes">13</h3>
                                     <p>Novos Clientes</p>
                                 </div>
                                 <div class="icon">
                                     <i class="ion ion-person-add"></i>
                                 </div>
-                                <a class="small-box-footer" href="/Clientes/Listagem" data-unsp-sanitized="clean">
+                                <a class="small-box-footer" href="/Clientes/Listagem.html" data-unsp-sanitized="clean">
                                     Mais informações
                                     <i class="fas fa-arrow-circle-right"></i>
                                 </a>
