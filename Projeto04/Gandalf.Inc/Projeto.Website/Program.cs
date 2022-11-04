@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Projeto.Website.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetConnectionString("gandalfConnection");
+builder.Services.AddDbContext<GandalfDBContext>(x => x.UseSqlServer(connectionString));
+
 
 var app = builder.Build();
 
