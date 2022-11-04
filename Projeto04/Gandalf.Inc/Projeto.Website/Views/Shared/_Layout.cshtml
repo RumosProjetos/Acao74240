@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gandalf.Inc</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/cerulean/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Projeto.Website.styles.css" asp-append-version="true" />
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Gandalf.Inc</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="navHome" asp-controller="Home" asp-action="Index" data-unsp-sanitized="clean">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navClientes" asp-controller="Clientes" asp-action="Index" data-unsp-sanitized="clean">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navProdutos" asp-controller="Produtos" asp-action="Index" data-unsp-sanitized="clean">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navCategorias" asp-controller="Categorias" asp-action="Index" data-unsp-sanitized="clean">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navVendas" asp-controller="Vendas" asp-action="Index" data-unsp-sanitized="clean">Vendas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navEstoques" asp-controller="Estoques" asp-action="Index" data-unsp-sanitized="clean">Estoques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navLojas" asp-controller="Lojas" asp-action="Index" data-unsp-sanitized="clean">Lojas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navLojas" asp-controller="Usuarios" asp-action="Index" data-unsp-sanitized="clean">Usuarios</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Gandalf.Inc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
