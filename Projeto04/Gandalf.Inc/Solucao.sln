@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.ConsoleApp", "Projeto.ConsoleApp\Projeto.ConsoleApp.csproj", "{D32EF031-5505-45A6-9A0B-289C8B1BD4B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.LogicaNegocio", "Projeto.LogicaNegocio\Projeto.LogicaNegocio.csproj", "{128F8D1E-1111-49F1-9E2B-A6CFB602190C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Modelo", "Projeto.Modelo\Projeto.Modelo.csproj", "{D0680F6C-199E-4529-94ED-2A9B5C622270}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Tests", "Projeto.Tests\Projeto.Tests.csproj", "{380A9EA0-FBC2-49BF-9818-00F9B00B418F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacao", "Documentacao", "{5BADECB3-A7A1-4845-9903-FDDE555A2D2D}"
+	ProjectSection(SolutionItems) = preProject
+		Documentacao\Definicao.pdf = Documentacao\Definicao.pdf
+		Documentacao\DiagramaUml.png = Documentacao\DiagramaUml.png
+		Documentacao\DiagramaUml.puml = Documentacao\DiagramaUml.puml
+		Documentacao\ERDiagram.png = Documentacao\ERDiagram.png
+		Documentacao\Número_de_identificação_fiscal.pdf = Documentacao\Número_de_identificação_fiscal.pdf
+		Documentacao\RegrasCartaoCredito.docx = Documentacao\RegrasCartaoCredito.docx
+		ToDos.txt = ToDos.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Validadores", "Projeto.Validadores\Projeto.Validadores.csproj", "{33DE1D30-5A40-4B50-A030-29FFA3204044}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Repositorio", "Projeto.Repositorio\Projeto.Repositorio.csproj", "{78815D26-979A-4AE1-9455-7B8D7D02C8BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Data", "Projeto.Data\Projeto.Data.csproj", "{640C8B26-EF20-4F64-BBCC-CB257EC62347}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D32EF031-5505-45A6-9A0B-289C8B1BD4B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32EF031-5505-45A6-9A0B-289C8B1BD4B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32EF031-5505-45A6-9A0B-289C8B1BD4B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32EF031-5505-45A6-9A0B-289C8B1BD4B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128F8D1E-1111-49F1-9E2B-A6CFB602190C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128F8D1E-1111-49F1-9E2B-A6CFB602190C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128F8D1E-1111-49F1-9E2B-A6CFB602190C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128F8D1E-1111-49F1-9E2B-A6CFB602190C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0680F6C-199E-4529-94ED-2A9B5C622270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0680F6C-199E-4529-94ED-2A9B5C622270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0680F6C-199E-4529-94ED-2A9B5C622270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0680F6C-199E-4529-94ED-2A9B5C622270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{380A9EA0-FBC2-49BF-9818-00F9B00B418F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{380A9EA0-FBC2-49BF-9818-00F9B00B418F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{380A9EA0-FBC2-49BF-9818-00F9B00B418F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{380A9EA0-FBC2-49BF-9818-00F9B00B418F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DE1D30-5A40-4B50-A030-29FFA3204044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DE1D30-5A40-4B50-A030-29FFA3204044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DE1D30-5A40-4B50-A030-29FFA3204044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DE1D30-5A40-4B50-A030-29FFA3204044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78815D26-979A-4AE1-9455-7B8D7D02C8BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78815D26-979A-4AE1-9455-7B8D7D02C8BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78815D26-979A-4AE1-9455-7B8D7D02C8BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78815D26-979A-4AE1-9455-7B8D7D02C8BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{640C8B26-EF20-4F64-BBCC-CB257EC62347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{640C8B26-EF20-4F64-BBCC-CB257EC62347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{640C8B26-EF20-4F64-BBCC-CB257EC62347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{640C8B26-EF20-4F64-BBCC-CB257EC62347}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EC0C7AA-FE1B-4ACD-958C-341E0BAEDBB6}
+	EndGlobalSection
+EndGlobal
