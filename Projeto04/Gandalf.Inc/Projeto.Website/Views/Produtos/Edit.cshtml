@@ -1,7 +1,7 @@
 ﻿@model Projeto.Website.Models.Produto
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
 <h1>Edit</h1>
@@ -17,6 +17,12 @@
                 <label asp-for="CodigoBarras" class="control-label"></label>
                 <input asp-for="CodigoBarras" class="form-control" />
                 <span asp-validation-for="CodigoBarras" class="text-danger"></span>
+
+                <br />
+                @if (Model.CodigoBarras != null)
+                {
+                    <barcode content="Model.CodigoBarras" width="200" height="100" />
+                }                
             </div>
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
@@ -71,7 +77,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar para Listagem</a>
 </div>
 
 @section Scripts {
