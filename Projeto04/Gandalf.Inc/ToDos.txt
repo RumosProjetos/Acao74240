@@ -16,3 +16,8 @@ Casaco Azul				1        45	   |Parcial| 45
 Calças					2		 20	   |Parcial| 40
 ....................................................
 Total											135
+
+
+
+
+https://learningprogramming.net/net/asp-net-core-mvc/generate-barcode-in-asp-net-core-mvc/

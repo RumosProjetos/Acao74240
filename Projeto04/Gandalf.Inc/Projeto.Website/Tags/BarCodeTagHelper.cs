@@ -2,6 +2,8 @@
 using System.Drawing;
 using ZXing.QrCode;
 
+
+///https://learningprogramming.net/net/asp-net-core-mvc/generate-barcode-in-asp-net-core-mvc/
 namespace Projeto.Website.Tags
 {
     [HtmlTargetElement("barcode")]
