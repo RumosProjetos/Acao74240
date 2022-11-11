@@ -8,4 +8,5 @@
 # https://bootswatch.com/cerulean/
 # https://jquery.com/
 # https://app.diagrams.net/
+https://learningprogramming.net/net/asp-net-core-mvc/generate-barcode-in-asp-net-core-mvc/
 
